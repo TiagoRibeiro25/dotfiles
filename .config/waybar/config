@@ -1,0 +1,186 @@
+{
+	"layer": "top",
+	"position": "top",
+	"margin": "0 0 0 0",
+	"height": "20px",
+	"modules-left": [
+		"custom/launcher",
+		"hyprland/workspaces",
+		"hyprland/window"
+	],
+	"modules-center": [],
+	"modules-right": [
+		"cpu",
+		"memory",
+		"backlight",
+		"pulseaudio",
+		"network",
+		"battery",
+		"tray",
+		"bluetooth",
+		"custom/clipboard",
+		"custom/colorpicker",
+		"custom/notification",
+		"clock",
+		"custom/power"
+	],
+	"hyprland/window": {
+		"icon": true,
+		"max-length": 80
+	},
+	"tray": {
+		"icon-size": 18,
+		"spacing": 5
+	},
+	"clock": {
+		"tooltip-format": "<tt><small>{calendar}</small></tt>",
+		"calendar": {
+			"mode": "month",
+			"mode-mon-col": 3,
+			"weeks-pos": "right",
+			"on-scroll": 1,
+			"on-click-right": "mode",
+			"format": {
+				"months": "<span color='#ffead3'><b>{}</b></span>",
+				"days": "<span color='#ecc6d9'><b>{}</b></span>",
+				"weeks": "<span color='#99ffdd'><b>W{}</b></span>",
+				"weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+				"today": "<span color='#ff6699'><b><u>{}</u></b></span>"
+			}
+		},
+		"actions": {
+			"on-click-right": "mode",
+			"on-click-forward": "tz_up",
+			"on-click-backward": "tz_down",
+			"on-scroll-up": "shift_up",
+			"on-scroll-down": "shift_down"
+		},
+		"format": " {:%d %m %Y  %H:%M}",
+		"format-alt": "  {:%d/%m/%Y  %H:%M}",
+		"interval": 1
+	},
+	"cpu": {
+		"interval": 2,
+		"format": " {usage}% - {avg_frequency} Ghz",
+		"states": {
+			"warning": 70,
+			"critical": 90
+		}
+	},
+	"memory": {
+		"interval": 2,
+		"format": " {}%",
+		"states": {
+			"warning": 70,
+			"critical": 90
+		}
+	},
+	"backlight": {
+		"format": "{icon} {percent}%",
+		"format-icons": [
+			"",
+			""
+		],
+		"on-scroll-up": "brightnessctl s +5%",
+		"on-scroll-down": "brightnessctl s 5%-"
+	},
+	"battery": {
+		"interval": 60,
+		"states": {
+			"good": 95,
+			"warning": 30,
+			"critical": 15
+		},
+		"format-charging": " {icon} {capacity}%",
+		"format": "{icon} {capacity}%",
+		"format-icons": [
+			"",
+			"",
+			"",
+			"",
+			""
+		],
+		"tooltip": true
+	},
+	"network": {
+		"interval": 30,
+		"format-wifi": " Wifi ({signalStrength}%)",
+		"format-ethernet": " Wired",
+		"format-disconnected": "⚠ Disconnected",
+		"format-linked": " {ifname} (No IP)",
+		"tooltip-format": "{ifname}: {essid} - {ipaddr}",
+		"on-click": "nm-connection-editor"
+	},
+	"pulseaudio": {
+		"format": "{icon} {volume}%",
+		"format-bluetooth": "{icon} {volume}%",
+		"format-muted": " Muted",
+		"on-click": "pavucontrol",
+		"on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+		"on-scroll-up": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+",
+		"on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-",
+		"tooltip-format": "{icon} {volume}% {device}",
+		"tooltip-format-muted": "Muted {device}",
+		"format-icons": {
+			"headphones": "",
+			"handsfree": "",
+			"headset": "",
+			"phone": "",
+			"portable": "",
+			"car": "",
+			"default": [
+				"",
+				""
+			]
+		}
+	},
+	"bluetooth": {
+		"format": "",
+		"format-disabled": "",
+		"interval": 30,
+		"on-click": "blueman-manager",
+		"on-click-right": "rfkill toggle bluetooth",
+		"tooltip-format": "{}"
+	},
+	"custom/notification": {
+		"tooltip": false,
+		"format": "{icon}",
+		"format-icons": {
+			"notification": "<span foreground='red'><sup></sup></span>",
+			"none": "",
+			"dnd-notification": "<span foreground='red'><sup></sup></span>",
+			"dnd-none": "",
+			"inhibited-notification": "<span foreground='red'><sup></sup></span>",
+			"inhibited-none": "",
+			"dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
+			"dnd-inhibited-none": ""
+		},
+		"return-type": "json",
+		"exec-if": "which swaync-client",
+		"exec": "swaync-client -swb",
+		"on-click": "swaync-client -t -sw",
+		"on-click-right": "swaync-client -d -sw",
+		"escape": true
+	},
+	"custom/colorpicker": {
+		"format": "",
+		"tooltip": false,
+		"on-click": "hyprpicker -a"
+	},
+	"custom/clipboard": {
+		"format": "󰅍",
+		"tooltip": false,
+		"on-click": "~/.config/hypr/scripts/clip",
+		"on-click-right": "cliphist wipe"
+	},
+	"custom/launcher": {
+		"format": "",
+		"on-click": "rofi -show drun",
+		"tooltip": false
+	},
+	"custom/power": {
+		"format": "⏻",
+		"on-click": "~/.config/hypr/scripts/rofi_powermenu",
+		"tooltip": false
+	}
+}
