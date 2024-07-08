@@ -175,7 +175,8 @@ window#waybar {
 	margin-right: 10px;
 }
 
-#tray {
+#tray,
+#battery {
 	border-radius: 10px;
 	margin-right: 10px;
 }

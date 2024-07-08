@@ -85,7 +85,7 @@
 		"on-scroll-down": "brightnessctl s 5%-"
 	},
 	"battery": {
-		"interval": 60,
+		"interval": 10,
 		"states": {
 			"good": 95,
 			"warning": 30,
