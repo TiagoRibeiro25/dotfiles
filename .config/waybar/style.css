@@ -131,7 +131,11 @@ window#waybar {
 	animation-direction: alternate;
 }
 
-#bluetooth {
+/* #bluetooth {
+	border-radius: 10px 0 0 10px;
+} */
+
+#custom-clipboard {
 	border-radius: 10px 0 0 10px;
 }
 

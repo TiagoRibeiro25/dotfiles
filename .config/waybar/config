@@ -17,7 +17,7 @@
 		"network",
 		"battery",
 		"tray",
-		"bluetooth",
+		// "bluetooth",
 		"custom/clipboard",
 		"custom/colorpicker",
 		"custom/notification",
