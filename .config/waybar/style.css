@@ -131,13 +131,13 @@ window#waybar {
 	animation-direction: alternate;
 }
 
-/* #bluetooth {
-	border-radius: 10px 0 0 10px;
-} */
-
-#custom-clipboard {
+#bluetooth {
 	border-radius: 10px 0 0 10px;
 }
+
+/* #custom-clipboard {
+	border-radius: 10px 0 0 10px;
+} */
 
 #custom-notification {
 	border-radius: 0 10px 10px 0;

@@ -1,0 +1,28 @@
+[
+	{
+		"context": "Workspace",
+		"bindings": {
+			"ctrl-b": "workspace::ToggleRightDock",
+			"ctrl-alt-b": "workspace::ToggleLeftDock"
+		}
+	},
+	{
+		"context": "Editor && mode == full",
+		"bindings": {
+			"ctrl-enter": "editor::NewlineBelow",
+			"ctrl-shift-enter": "editor::NewlineAbove"
+		}
+	},
+	{
+		"context": "Editor",
+		"bindings": {
+			"alt-shift-a": [
+				"editor::ToggleComments",
+				{
+					"advance_downwards": false
+				}
+			],
+			"alt-shift-f": "editor::Format"
+		}
+	}
+]

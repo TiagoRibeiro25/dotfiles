@@ -14,15 +14,15 @@
 		"memory",
 		"backlight",
 		"pulseaudio",
-		// "network",
-		"battery",
-		"tray",
-		// "bluetooth",
+		"network",
+		"bluetooth",
 		"custom/clipboard",
 		"custom/colorpicker",
 		"custom/notification",
+		"battery",
 		"clock",
-		"custom/power"
+		"tray"
+		// "custom/power"
 	],
 	"hyprland/window": {
 		"icon": true,
@@ -176,6 +176,7 @@
 	"custom/launcher": {
 		"format": "",
 		"on-click": "rofi -show drun",
+		"on-click-right": "~/.config/hypr/scripts/rofi_powermenu",
 		"tooltip": false
 	},
 	"custom/power": {
