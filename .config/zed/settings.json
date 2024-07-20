@@ -14,8 +14,8 @@
 		"diagnostics": false,
 		"metrics": false
 	},
-	"ui_font_size": 18,
-	"buffer_font_size": 16,
+	"ui_font_size": 15,
+	"buffer_font_size": 14,
 	"use_tab_char": true,
 	"buffer_font_family": "JetBrains Mono",
 	"current_line_highlight": "gutter",

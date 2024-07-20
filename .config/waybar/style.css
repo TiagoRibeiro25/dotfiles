@@ -21,21 +21,21 @@
 	border: 0;
 	padding: 0 0;
 	font-family: "MesloLGS NF";
-	font-size: 14px;
+	font-size: 11px;
+	padding-top: 1px;
 	transition: all 0.5s ease;
 }
 
 window#waybar {
-	/* background-color: shade(#1e1e2e, 0.3); */
-	background-color: transparent;
+	background-color: @mantle;
+	opacity: 0.95;
 }
 
 #workspaces button {
 	color: @base;
-	border-radius: 50%;
 	margin-left: 1px;
 	margin-right: 1px;
-	padding: 2 6 2 0;
+	padding: 2 0 2 0;
 	opacity: 0.7;
 }
 
@@ -67,10 +67,8 @@ window#waybar {
 
 #workspaces {
 	border-style: solid;
-	background-color: @base;
 	opacity: 1;
-	border-radius: 10px;
-	margin: 4px 10px 0px 10px;
+	margin: 0px 10px 0px 10px;
 }
 
 #bluetooth.disabled {
@@ -91,10 +89,8 @@ window#waybar {
 #custom-notification {
 	padding: 5px 8px;
 	border-style: solid;
-	/* background-color: shade(@base, 1.1); */
-	background-color: @mantle;
 	opacity: 1;
-	margin: 4px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
 }
 
 /* -----------------------------------------------------------------------------
@@ -103,18 +99,15 @@ window#waybar {
 
 #clock {
 	color: @sky;
-	border-radius: 10px;
-	margin: 4px 10px 0px 0px;
+	margin: 0px 10px 0px 0px;
 }
 
 #backlight {
 	color: @yellow;
-	border-radius: 10px 0 0 10px;
 }
 
 #battery {
 	color: #d8dee9;
-	border-radius: 0 10px 10px 0;
 	margin-right: 10px;
 }
 
@@ -131,22 +124,12 @@ window#waybar {
 	animation-direction: alternate;
 }
 
-#bluetooth {
-	border-radius: 10px 0 0 10px;
-}
-
-/* #custom-clipboard {
-	border-radius: 10px 0 0 10px;
-} */
-
 #custom-notification {
-	border-radius: 0 10px 10px 0;
 	margin-right: 10px;
 }
 
 #cpu {
 	color: @sky;
-	border-radius: 10px 0 0 10px;
 }
 
 #cpu #cpu-icon {
@@ -155,7 +138,6 @@ window#waybar {
 
 #memory {
 	color: @sky;
-	border-radius: 0 10px 10px 0;
 	margin-right: 10px;
 }
 
@@ -165,7 +147,6 @@ window#waybar {
 
 #network {
 	color: @green;
-	border-radius: 10px;
 	margin-right: 10px;
 }
 
@@ -175,38 +156,24 @@ window#waybar {
 
 #pulseaudio {
 	color: @flamingo;
-	border-radius: 0 10px 10px 0;
 	margin-right: 10px;
 }
 
 #tray,
 #battery {
-	border-radius: 10px;
 	margin-right: 10px;
 }
 
-#custom-launcher,
-#custom-power {
-	border-radius: 10px;
-}
-
 #custom-launcher {
-	margin: 4px 10px 0px 17px;
-	font-size: 25px;
-}
-
-#custom-power {
-	margin: 4px 17px 0px 10px;
-	font-size: 20px;
+	margin: 0px 10px 0px 17px;
+	font-size: 19px;
 }
 
 #window {
 	border-style: hidden;
 	margin-right: 10px;
-	margin-top: 4px;
 	color: #eceff4;
 	background-color: @mantle;
-	border-radius: 10px;
 	padding-left: 10px;
 	padding-right: 10px;
 }
