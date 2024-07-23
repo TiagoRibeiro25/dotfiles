@@ -1,0 +1,39 @@
+main.advanced_view true
+main.audio_codec opus
+main.audio_input Default output
+main.codec auto
+main.color_range limited
+main.fps 60
+main.framerate_mode auto
+main.hide_window_when_recording false
+main.merge_audio_tracks true
+main.overclock false
+main.quality very_high
+main.record_area_height 1080
+main.record_area_option eDP-1
+main.record_area_width 1920
+main.record_cursor true
+main.restore_portal_session false
+main.show_recording_saved_notifications true
+main.show_recording_started_notifications false
+main.show_recording_stopped_notifications false
+main.software_encoding_warning_shown false
+record.container mp4
+record.pause_recording_hotkey 0 0
+record.save_directory /home/tiago/Videos
+record.start_recording_hotkey 0 0
+record.stop_recording_hotkey 0 0
+record.unpause_recording_hotkey 0 0
+replay.container matroska
+replay.save_directory /home/tiago/Videos
+replay.save_recording_hotkey 0 0
+replay.start_recording_hotkey 0 0
+replay.stop_recording_hotkey 0 0
+replay.time 60
+streaming.custom.container flv
+streaming.custom.url 
+streaming.service twitch
+streaming.start_recording_hotkey 0 0
+streaming.stop_recording_hotkey 0 0
+streaming.twitch.key 
+streaming.youtube.key 

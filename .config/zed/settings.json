@@ -14,8 +14,8 @@
 		"diagnostics": false,
 		"metrics": false
 	},
-	"ui_font_size": 15,
-	"buffer_font_size": 14,
+	"ui_font_size": 16,
+	"buffer_font_size": 15,
 	"use_tab_char": true,
 	"buffer_font_family": "JetBrains Mono",
 	"current_line_highlight": "gutter",
@@ -41,7 +41,7 @@
 	},
 	"preferred_line_length": 100,
 	"hard_tabs": true,
-	"tab_size": 2,
+	"tab_size": 4,
 	"auto_update": false,
 	"soft_wrap": "editor_width",
 	"prettier": {

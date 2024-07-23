@@ -1,0 +1,7 @@
+Threshold = 75
+DisplayMonitorSources = false
+EnableUpdates = true
+FilterInput = true
+FilterOutput = false
+LastUsedInput = "alsa_input.usb-M8_M8-00.mono-fallback"
+LastUsedOutput = ""

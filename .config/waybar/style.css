@@ -115,6 +115,18 @@ window#waybar {
 	color: #81a1c1;
 }
 
+#battery.warning,
+#memory.warning,
+#cpu.warning {
+	color: #ebcb8b;
+	background: transparent;
+}
+
+#memory.critical,
+#cpu.critical {
+	color: #bf616a;
+}
+
 #battery.critical:not(.charging) {
 	color: #bf616a;
 	animation-name: blink;
