@@ -21,7 +21,6 @@
 		"battery",
 		"clock",
 		"tray"
-		// "custom/power"
 	],
 	"hyprland/window": {
 		"icon": true,
@@ -54,8 +53,8 @@
 			"on-scroll-up": "shift_up",
 			"on-scroll-down": "shift_down"
 		},
-		"format": " {:%d %m %Y  %H:%M}",
-		"format-alt": "  {:%d/%m/%Y  %H:%M}",
+		"format": "  {:%H:%M}",
+		"format-alt": "  {:%d %m %Y  %H:%M}",
 		"interval": 1
 	},
 	"cpu": {
@@ -91,22 +90,22 @@
 			"critical": 15
 		},
 		"format-charging": " {icon} {capacity}%",
-		"format": "{icon} {capacity}%",
+		"format": "{icon}  {capacity}%",
 		"format-icons": [
-			"",
-			"",
-			"",
-			"",
-			""
+			" ",
+			" ",
+			" ",
+			" ",
+			" "
 		],
 		"tooltip": true
 	},
 	"network": {
 		"interval": 30,
-		"format-wifi": " Wifi ({signalStrength}%)",
-		"format-ethernet": " Wired",
+		"format-wifi": "  Wifi ({signalStrength}%)",
+		"format-ethernet": "󱎔 Wired",
 		"format-disconnected": "⚠ Disconnected",
-		"format-linked": " {ifname} (No IP)",
+		"format-linked": "󰇄 {ifname} (No IP)",
 		"tooltip-format": "{ifname}: {essid} - {ipaddr}",
 		"on-click": "nm-connection-editor"
 	},
@@ -114,6 +113,7 @@
 		"format": "{icon} {volume}%",
 		"format-bluetooth": "{icon} {volume}%",
 		"format-muted": " Muted",
+		"format-muted-bluetooth": " Muted",
 		"on-click": "pavucontrol",
 		"on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
 		"on-scroll-up": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+",
@@ -121,15 +121,13 @@
 		"tooltip-format": "{icon} {volume}% {device}",
 		"tooltip-format-muted": "Muted {device}",
 		"format-icons": {
-			"headphones": "",
-			"handsfree": "",
-			"headset": "",
+			"headphones": " ",
 			"phone": "",
 			"portable": "",
-			"car": "",
+			"car": " ",
 			"default": [
 				"",
-				""
+				" "
 			]
 		}
 	},
@@ -176,11 +174,6 @@
 		"format": "",
 		"on-click": "rofi -show drun",
 		"on-click-right": "~/.config/hypr/scripts/rofi_powermenu",
-		"tooltip": false
-	},
-	"custom/power": {
-		"format": "⏻",
-		"on-click": "~/.config/hypr/scripts/rofi_powermenu",
 		"tooltip": false
 	}
 }

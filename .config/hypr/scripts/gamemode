@@ -4,6 +4,8 @@ HYPRGAMEMODE=$(hyprctl getoption animations:enabled | sed -n '1p' | awk '{print 
 # Hyprland performance
 if [ $HYPRGAMEMODE = 1 ]; then
 	killall waybar
+        killall hyprpaper
+        killall hypridle
 	hyprctl --batch "\
         keyword animations:enabled 0;\
         keyword decoration:drop_shadow 0;\
@@ -12,8 +14,11 @@ if [ $HYPRGAMEMODE = 1 ]; then
         keyword general:gaps_out 0;\
         keyword general:border_size 1;\
         keyword decoration:rounding 0"
-	exit
+        notify-send "Gamemode" "Gamemode enabled"
 else
 	hyprctl reload
 	waybar >/dev/null 2>&1 &
+        hyprpaper >/dev/null 2>&1 &
+        hypridle >/dev/null 2>&1 &
+        notify-send "Gamemode" "Gamemode disabled"
 fi

@@ -10,7 +10,7 @@ dimensions.lines = 45
 dimensions.columns = 120
 
 padding.x = 10
-# padding.y = 10
+padding.y = 10
 
 decorations = "Full"
 # decorations = "None"
@@ -20,10 +20,11 @@ dynamic_title = true
 
 [font]
 
-normal.family = "MesloLGS NF"
-bold.family = "MesloLGS NF"
-italic.family = "MesloLGS NF"
-bold_italic.family = "MesloLGS NF"
+#normal.family = "MesloLGS NF"
+normal.family = "CaskaydiaCove Nerd Font Mono"
+bold.family = "CaskaydiaCove Nerd Font Mono"
+italic.family = "CaskaydiaCove Nerd Font Mono"
+bold_italic.family = "CaskaydiaCove Nerd Font Mono"
 
-size = 11.0
+size = 13.0
 
