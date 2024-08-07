@@ -1,5 +1,5 @@
 /* Text Font */
 
 * {
-    font: "MesloLGS NF 12";
+    font: "CaskaydiaCove Nerd Font 12";
 }

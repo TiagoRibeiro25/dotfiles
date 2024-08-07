@@ -17,10 +17,10 @@
 /* Reset all styles */
 
 * {
-	color: @lavender;
+	color: @yellow;
 	border: 0;
+	border-radius: 0;
 	padding: 0 0;
-	/* font-family: "MesloLGS NF"; */
 	font-family: "CaskaydiaCove Nerd Font";
 	font-size: 14px;
 	padding-top: 1px;
@@ -28,12 +28,12 @@
 }
 
 window#waybar {
-	background-color: @mantle;
+	background-color: @black;
 	opacity: 0.95;
 }
 
 #workspaces button {
-	color: @base;
+	color: @black;
 	margin-left: 1px;
 	margin-right: 1px;
 	padding: 2 0 2 0;
@@ -41,11 +41,11 @@ window#waybar {
 }
 
 #workspaces button:hover * {
-	color: white;
+	color: @peach;
 }
 
 #workspaces button:hover {
-	color: white;
+	color: @peach;
 	box-shadow: none;
 	text-shadow: none;
 	border: 0px;
@@ -59,7 +59,7 @@ window#waybar {
 }
 
 #workspaces button.active * {
-	color: white;
+	color: @peach;
 }
 
 #workspaces button.urgent * {
@@ -98,37 +98,30 @@ window#waybar {
    * Module styles
    * -------------------------------------------------------------------------- */
 
+/* #backlight,
+#pulseaudio, */
 #clock {
-	color: @sky;
-	margin: 0px 10px 0px 0px;
-}
-
-#backlight {
-	color: @yellow;
-}
-
-#battery {
-	color: #d8dee9;
+	color: @flamingo;
 }
 
 #battery.charging {
-	color: #81a1c1;
+	color: @rosewater;
 }
 
 #battery.warning,
 #memory.warning,
 #cpu.warning {
-	color: #ebcb8b;
+	color: @maroon;
 	background: transparent;
 }
 
 #memory.critical,
 #cpu.critical {
-	color: #bf616a;
+	color: @red;
 }
 
 #battery.critical:not(.charging) {
-	color: #bf616a;
+	color: @red;
 	animation-name: blink;
 	animation-duration: 0.5s;
 	animation-timing-function: linear;
@@ -136,43 +129,26 @@ window#waybar {
 	animation-direction: alternate;
 }
 
+#cpu,
+#cpu #cpu-icon,
+#memory {
+	color: @yellow;
+}
+
+#clock,
+#pulseaudio,
+#memory,
+#network,
 #custom-notification {
 	margin-right: 10px;
 }
 
-#cpu {
-	color: @sky;
-}
-
-#cpu #cpu-icon {
-	color: @sky;
-}
-
-#memory {
-	color: @sky;
-	margin-right: 10px;
-}
-
 #network.disabled {
-	color: #bf616a;
-}
-
-#network {
-	color: @green;
-	margin-right: 10px;
+	color: @red;
 }
 
 #network.disconnected {
-	color: #bf616a;
-}
-
-#pulseaudio {
-	color: @flamingo;
-	margin-right: 10px;
-}
-
-#tray {
-	margin-right: 10px;
+	color: @red;
 }
 
 #custom-launcher {
@@ -183,8 +159,6 @@ window#waybar {
 #window {
 	border-style: hidden;
 	margin-right: 10px;
-	color: #eceff4;
-	background-color: @mantle;
 	padding-left: 10px;
 	padding-right: 10px;
 }

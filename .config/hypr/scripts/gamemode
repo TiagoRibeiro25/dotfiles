@@ -14,11 +14,11 @@ if [ $HYPRGAMEMODE = 1 ]; then
         keyword general:gaps_out 0;\
         keyword general:border_size 1;\
         keyword decoration:rounding 0"
-        notify-send "Gamemode" "Gamemode enabled"
+        # notify-send "Gamemode" "Gamemode enabled"
 else
 	hyprctl reload
 	waybar >/dev/null 2>&1 &
         hyprpaper >/dev/null 2>&1 &
         hypridle >/dev/null 2>&1 &
-        notify-send "Gamemode" "Gamemode disabled"
+        # notify-send "Gamemode" "Gamemode disabled"
 fi

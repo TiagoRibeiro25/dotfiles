@@ -9,6 +9,7 @@
 	],
 	"modules-center": [],
 	"modules-right": [
+		"tray",
 		"cpu",
 		"memory",
 		"backlight",
@@ -19,8 +20,7 @@
 		"custom/colorpicker",
 		"custom/notification",
 		"battery",
-		"clock",
-		"tray"
+		"clock"
 	],
 	"hyprland/window": {
 		"icon": true,
@@ -54,12 +54,12 @@
 			"on-scroll-down": "shift_down"
 		},
 		"format": "  {:%H:%M}",
-		"format-alt": "  {:%d %m %Y  %H:%M}",
+		"format-alt": " {:%H:%M    %d %m %Y}",
 		"interval": 1
 	},
 	"cpu": {
 		"interval": 2,
-		"format": " {usage}% - {avg_frequency} Ghz",
+		"format": " {usage}%",
 		"states": {
 			"warning": 70,
 			"critical": 90
@@ -90,7 +90,7 @@
 			"critical": 15
 		},
 		"format-charging": " {icon} {capacity}%",
-		"format": "{icon}  {capacity}%",
+		"format": "{icon} {capacity}%",
 		"format-icons": [
 			" ",
 			" ",

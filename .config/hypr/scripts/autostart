@@ -1,0 +1,5 @@
+#!/bin/bash
+
+hyprctl dispatch workspace 8
+thunderbird &
+hyprctl dispatch workspace 1
