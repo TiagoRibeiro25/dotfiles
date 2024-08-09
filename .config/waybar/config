@@ -63,7 +63,8 @@
 		"states": {
 			"warning": 70,
 			"critical": 90
-		}
+		},
+		"on-click": "gnome-system-monitor"
 	},
 	"memory": {
 		"interval": 2,
@@ -71,7 +72,8 @@
 		"states": {
 			"warning": 70,
 			"critical": 90
-		}
+		},
+		"on-click": "gnome-system-monitor"
 	},
 	"backlight": {
 		"format": "{icon} {percent}%",
@@ -102,11 +104,11 @@
 	},
 	"network": {
 		"interval": 30,
-		"format-wifi": "  Wifi ({signalStrength}%)",
+		"format-wifi": "  Wifi",
 		"format-ethernet": "󱎔 Wired",
 		"format-disconnected": "⚠ Disconnected",
 		"format-linked": "󰇄 {ifname} (No IP)",
-		"tooltip-format": "{ifname}: {essid} - {ipaddr}",
+		"tooltip-format": " {ifname}: {essid} ({signalStrength}%) - {ipaddr} ",
 		"on-click": "nm-connection-editor"
 	},
 	"pulseaudio": {
