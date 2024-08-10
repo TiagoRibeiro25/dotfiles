@@ -15,10 +15,10 @@ if [ -z "$action" ]; then
 fi
 
 if [ "$action" == "start" ]; then
-	waybar &
-    hyprpaper &
-    hypridle &
-    swaync &
+	hyprctl dispatch exec waybar &
+    hyprctl dispatch exec hyprpaper &
+    hyprctl dispatch exec hypridle &
+    hyprctl dispatch exec swaync &
     hyprctl dispatch exec [workspace 8 silent] thunderbird
 elif [ "$action" == "stop" ]; then
 	killall waybar
