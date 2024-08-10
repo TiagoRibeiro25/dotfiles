@@ -22,7 +22,7 @@
 	border-radius: 0;
 	padding: 0 0;
 	font-family: "CaskaydiaCove Nerd Font";
-	font-size: 14px;
+	font-size: 13px;
 	padding-top: 1px;
 	transition: all 0.5s ease;
 }
@@ -59,11 +59,11 @@ window#waybar {
 }
 
 #workspaces button.active * {
-	color: @peach;
+	color: @green;
 }
 
 #workspaces button.urgent * {
-	color: @rosewater;
+	color: @peach;
 }
 
 #workspaces {
@@ -98,12 +98,6 @@ window#waybar {
    * Module styles
    * -------------------------------------------------------------------------- */
 
-/* #backlight,
-#pulseaudio, */
-#clock {
-	color: @flamingo;
-}
-
 #battery.charging {
 	color: @rosewater;
 }
@@ -135,7 +129,6 @@ window#waybar {
 	color: @yellow;
 }
 
-#clock,
 #pulseaudio,
 #memory,
 #network,
@@ -151,9 +144,15 @@ window#waybar {
 	color: @red;
 }
 
-#custom-launcher {
-	margin: 0px 10px 0px 17px;
-	font-size: 19px;
+#custom-launcher,
+#custom-powermenu {
+	margin: 0px 17px 0px 17px;
+	font-size: 16px;
+	color: @green;
+}
+
+#custom-powermenu {
+	margin: 0px 20px 0px 10px;
 }
 
 #window {
@@ -161,4 +160,8 @@ window#waybar {
 	margin-right: 10px;
 	padding-left: 10px;
 	padding-right: 10px;
+}
+
+#window > * {
+	color: @flamingo;
 }

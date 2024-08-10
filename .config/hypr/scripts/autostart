@@ -1,5 +1,33 @@
 #!/bin/bash
 
-hyprctl dispatch workspace 8
-thunderbird &
-hyprctl dispatch workspace 1
+usage() {
+    echo "Usage: autostart [start|stop]"
+    exit 1
+}
+
+# Get value of argument (action: start|stop)
+action=$1
+
+
+# Check if the argument is empty
+if [ -z "$action" ]; then
+    usage
+fi
+
+if [ "$action" == "start" ]; then
+	waybar &
+    hyprpaper &
+    hypridle &
+    swaync &
+    hyprctl dispatch exec [workspace 8 silent] thunderbird
+elif [ "$action" == "stop" ]; then
+	killall waybar
+    killall hyprpaper
+    killall hypridle
+    killall swaync
+    killall thunderbird
+else
+    echo "Invalid action: $action"
+    usage
+fi
+

@@ -1,3 +1,23 @@
 #!/bin/bash
 
-cliphist list | rofi -dmenu -p "Clipboard" -i -theme "$HOME/.config/rofi/clip.rasi"| cliphist decode | wl-copy
+usage() {
+    echo "Usage: clip [clip|clear]"
+    exit 1
+}
+
+# Get value of argument (action: clip, clear)
+action=$1
+
+if [ -z "$action" ]; then
+    usage
+fi
+
+if [ "$action" == "clip" ]; then
+    cliphist list | rofi -dmenu -p "Clipboard" -i -theme "$HOME/.config/rofi/clip.rasi"| cliphist decode | wl-copy
+elif [ "$action" == "clear" ]; then
+    cliphist wipe
+    notify-send -i /usr/share/icons/AdwaitaLegacy/48x48/legacy/edit-clear-all.png "Clipboard" "Clipboard history has been cleared."
+else
+    echo "Invalid action: $action"
+    usage
+fi

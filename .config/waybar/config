@@ -4,10 +4,12 @@
 	"margin": "0 0 0 0",
 	"modules-left": [
 		"custom/launcher",
-		"hyprland/workspaces",
+		"clock",
 		"hyprland/window"
 	],
-	"modules-center": [],
+	"modules-center": [
+		"hyprland/workspaces"
+	],
 	"modules-right": [
 		"tray",
 		"cpu",
@@ -20,7 +22,7 @@
 		"custom/colorpicker",
 		"custom/notification",
 		"battery",
-		"clock"
+		"custom/powermenu"
 	],
 	"hyprland/window": {
 		"icon": true,
@@ -53,8 +55,7 @@
 			"on-scroll-up": "shift_up",
 			"on-scroll-down": "shift_down"
 		},
-		"format": "  {:%H:%M}",
-		"format-alt": " {:%H:%M    %d %m %Y}",
+		"format": "{:%H:%M | %b. %d. %A}",
 		"interval": 1
 	},
 	"cpu": {
@@ -104,11 +105,11 @@
 	},
 	"network": {
 		"interval": 30,
-		"format-wifi": "  Wifi",
+		"format-wifi": "  Wifi | {signalStrength}%",
 		"format-ethernet": "󱎔 Wired",
 		"format-disconnected": "⚠ Disconnected",
 		"format-linked": "󰇄 {ifname} (No IP)",
-		"tooltip-format": " {ifname}: {essid} ({signalStrength}%) - {ipaddr} ",
+		"tooltip-format": " {ifname}: {essid} - {ipaddr} ",
 		"on-click": "nm-connection-editor"
 	},
 	"pulseaudio": {
@@ -117,9 +118,9 @@
 		"format-muted": " Muted",
 		"format-muted-bluetooth": " Muted",
 		"on-click": "pavucontrol",
-		"on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
-		"on-scroll-up": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+",
-		"on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-",
+		"on-click-right": "~/.config/hypr/scripts/volume toggle-mute",
+		"on-scroll-up": "~/.config/hypr/scripts/volume up",
+		"on-scroll-down": "~/.config/hypr/scripts/volume down",
 		"tooltip-format": "{icon} {volume}% {device}",
 		"tooltip-format-muted": "Muted {device}",
 		"format-icons": {
@@ -138,7 +139,7 @@
 		"format-disabled": "",
 		"interval": 30,
 		"on-click": "blueman-manager",
-		"on-click-right": "rfkill toggle bluetooth",
+		"on-click-right": "~/.config/hypr/scripts/bluetooth",
 		"tooltip-format": "{}"
 	},
 	"custom/notification": {
@@ -169,13 +170,17 @@
 	"custom/clipboard": {
 		"format": "󰅍",
 		"tooltip": false,
-		"on-click": "~/.config/hypr/scripts/clip",
-		"on-click-right": "cliphist wipe"
+		"on-click": "~/.config/hypr/scripts/clip clip",
+		"on-click-right": "~/.config/hypr/scripts/clip clear"
 	},
 	"custom/launcher": {
 		"format": "",
 		"on-click": "rofi -show drun",
-		"on-click-right": "~/.config/hypr/scripts/rofi_powermenu",
+		"tooltip": false
+	},
+	"custom/powermenu": {
+		"format": "",
+		"on-click": "~/.config/hypr/scripts/rofi_powermenu",
 		"tooltip": false
 	}
 }

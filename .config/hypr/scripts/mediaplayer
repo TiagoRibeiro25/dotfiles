@@ -1,0 +1,27 @@
+#!/bin/bash
+
+usage() {
+    echo "Usage: mediaplayer [play-pause|next|previous]"
+    exit 1
+}
+
+# Get value of argument (action: play-pause|next|previous)
+action=$1
+
+if [ -z "$action" ]; then
+    usage
+fi
+
+if [ "$action" == "play-pause" ]; then
+    playerctl play-pause
+    notify-send -i multimedia-player "Media Player" "Music/Video has been toggled"
+elif [ "$action" == "next" ]; then
+    playerctl next
+    notify-send -i multimedia-player "Media Player" "Next track"
+elif [ "$action" == "previous" ]; then
+    playerctl previous
+    notify-send -i multimedia-player "Media Player" "Previous track"
+else
+    echo "Invalid action: $action"
+    usage
+fi
