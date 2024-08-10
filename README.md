@@ -7,7 +7,7 @@ My dotfiles for my Arch Linux setup.
 - **OS**: Arch Linux
 - **WM**: Hyprland
 - **Terminal**: Alacritty
-- **Shell**: Bash
+- **Shell**: Zsh w/Oh-My-Zsh
 - **File Manager**: Thunar
 - **Browser**: Brave
 - **Font**: CaskaydiaCove Nerd Font
