@@ -69,6 +69,7 @@ alias fonts-reset="sudo fc-cache -f -v"
 alias fastfetch="\fastfetch --config groups.jsonc"
 alias yay-remove-children='yay -Rns $(yay -Qdtq)'
 alias yay-remove-package='yay -Rcns'
+alias reflector-update="sudo reflector --verbose --latest 10 --sort rate --protocol https --save /etc/pacman.d/mirrorlist"
 
 # zsh-autocomplete optimizations
 zstyle ':autocomplete:*' max-lines 1
