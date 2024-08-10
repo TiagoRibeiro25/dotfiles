@@ -10,7 +10,9 @@ fi
 
 # Send a desktop notification with the number of updates
 if [ "$update_count" -gt 0 ]; then
+    sleep 2
     notify-send -i /usr/share/icons/AdwaitaLegacy/48x48/legacy/emblem-default.png "System Updates" "$update_count updates are available."
+    node ~/Repos/Text-to-Speech/src/main.js "Master, there are $update_count system updates available." "updates" "deleteAfterPlay"
 else
     notify-send -i /usr/share/icons/AdwaitaLegacy/48x48/legacy/emblem-default.png "System Updates" "Your system is up to date."
 fi
