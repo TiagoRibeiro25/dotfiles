@@ -1,0 +1,33 @@
+Backups
+blob_storage
+Cache
+CachedData
+CachedExtensionVSIXs
+CachedProfilesData
+Code Cache
+Crashpad
+databases
+DawnCache
+Dictionaries
+GPUCache
+Local Storage
+logs
+Service Worker
+Session Storage
+Shared Dictionary
+WebStorage
+.org.chromium.Chromium*
+Cookies
+Cookies-journal
+languagepacks.json
+machineid
+Network Persistent State
+Preferences
+SharedStorage
+TransportSecurity
+Trust Tokens
+Trust Tokens-journal
+
+User/globalStorage
+User/History
+User/workspaceStorage

@@ -3,5 +3,6 @@
     "discordBranch": "stable",
     "arRPC": "on",
     "splashColor": "rgb(220, 221, 222)",
-    "splashBackground": "rgb(16, 16, 20)"
+    "splashBackground": "rgb(16, 16, 20)",
+    "tray": true
 }

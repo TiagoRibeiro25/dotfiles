@@ -1,0 +1,20 @@
+[Desktop Entry]
+Version=1.0
+Name=Whatsapp
+Comment=Web App
+Exec=brave --app="https://web.whatsapp.com/" --class=WebApp-Whatsapp1648 --name=WebApp-Whatsapp1648 --user-data-dir=/home/tiago/.local/share/ice/profiles/Whatsapp1648
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=/home/tiago/.local/share/ice/icons/Whatsapp.png
+Categories=GTK;Utility;
+MimeType=text/html;text/xml;application/xhtml_xml;
+StartupWMClass=WebApp-Whatsapp1648
+StartupNotify=true
+X-WebApp-Browser=Brave
+X-WebApp-URL=https://web.whatsapp.com/
+X-WebApp-CustomParameters=
+X-WebApp-Navbar=false
+X-WebApp-PrivateWindow=false
+X-WebApp-Isolated=true
+

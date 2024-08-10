@@ -1,0 +1,20 @@
+[Desktop Entry]
+Version=1.0
+Name=ChatGPT
+Comment=Web App
+Exec=brave --app="https://chat.openai.com/chat" --class=WebApp-ChatGPTbrave2851 --name=WebApp-ChatGPTbrave2851
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=org.kde.neochat
+Categories=GTK;WebApps;
+MimeType=text/html;text/xml;application/xhtml_xml;
+StartupWMClass=WebApp-ChatGPTbrave2851
+StartupNotify=true
+X-WebApp-Browser=Brave
+X-WebApp-URL=https://chat.openai.com/chat
+X-WebApp-CustomParameters=
+X-WebApp-Navbar=false
+X-WebApp-PrivateWindow=false
+X-WebApp-Isolated=false
+

@@ -1,0 +1,19 @@
+[Desktop Entry]
+Version=1.0
+Name=Microsoft Teams
+Comment=Web App
+Exec=brave --app="https://teams.microsoft.com/v2/?culture=pt-pt&country=pt" --class=WebApp-MicrosoftTeams1380 --name=WebApp-MicrosoftTeams1380 --user-data-dir=/home/tiago/.local/share/ice/profiles/MicrosoftTeams1380
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=/home/tiago/.local/share/ice/icons/MicrosoftTeams.png
+Categories=GTK;Office;
+MimeType=text/html;text/xml;application/xhtml_xml;
+StartupWMClass=WebApp-MicrosoftTeams1380
+StartupNotify=true
+X-WebApp-Browser=Brave
+X-WebApp-URL=https://teams.microsoft.com/v2/?culture=pt-pt&country=pt
+X-WebApp-CustomParameters=
+X-WebApp-Navbar=false
+X-WebApp-PrivateWindow=false
+X-WebApp-Isolated=true
