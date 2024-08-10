@@ -20,13 +20,13 @@ get_volume_percentage() {
 
 if [ "$action" == "up" ]; then
     wpctl set-volume -l 1.4 @DEFAULT_AUDIO_SINK@ 5%+
-    notify-send -i multimedia-player "Volume" "$(get_volume_percentage)"
+    #notify-send -i multimedia-player "Volume" "$(get_volume_percentage)"
 elif [ "$action" == "down" ]; then
     wpctl set-volume -l 1.4 @DEFAULT_AUDIO_SINK@ 5%-
-    notify-send -i multimedia-player "Volume" "$(get_volume_percentage)"
+    #notify-send -i multimedia-player "Volume" "$(get_volume_percentage)"
 elif [ "$action" == "toggle-mute" ]; then
     wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
-    notify-send -i multimedia-player "Volume" "Sound has been muted/unmuted"
+    #notify-send -i multimedia-player "Volume" "Sound has been muted/unmuted"
 else
     echo "Invalid action: $action"
     usage

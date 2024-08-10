@@ -22,7 +22,7 @@ if [ "$action" == "up" ]; then
     fi
 
     brightnessctl s +5%
-    notify-send -i /usr/share/icons/AdwaitaLegacy/48x48/legacy/video-display.png "Monitor" "Brightness increased $(brightnessctl | grep -oP '\(\d+%\)')"
+   	#notify-send -i /usr/share/icons/AdwaitaLegacy/48x48/legacy/video-display.png "Monitor" "Brightness increased $(brightnessctl | grep -oP '\(\d+%\)')"
 elif [ "$action" == "down" ]; then
     # Check if current brightness is already at 0 (minimum)
     if [ "$CURRENT_BRIGHTNESS" -le 0 ]; then
@@ -30,7 +30,7 @@ elif [ "$action" == "down" ]; then
     fi
 
     brightnessctl s 5%-
-    notify-send -i /usr/share/icons/AdwaitaLegacy/48x48/legacy/video-display.png "Monitor" "Brightness decreased $(brightnessctl | grep -oP '\(\d+%\)')"
+    #notify-send -i /usr/share/icons/AdwaitaLegacy/48x48/legacy/video-display.png "Monitor" "Brightness decreased $(brightnessctl | grep -oP '\(\d+%\)')"
 else
     echo "Invalid action: $action"
     usage
