@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sleep 5
+
 # Run yay to check for updates and store the output
 update_count=$(yay -Qu 2>/dev/null | wc -l)
 
@@ -10,9 +12,8 @@ fi
 
 # Send a desktop notification with the number of updates
 if [ "$update_count" -gt 0 ]; then
-    #sleep 2
     notify-send -i /usr/share/icons/AdwaitaLegacy/48x48/legacy/emblem-default.png "System Updates" "$update_count updates are available."
-    node ~/Repos/Text-to-Speech/src/main.js "There are $update_count system updates available." "updates" "deleteAfterPlay"
+    #node ~/Repos/Text-to-Speech/src/main.js "There are $update_count system updates available." "updates" "deleteAfterPlay"
 else
     notify-send -i /usr/share/icons/AdwaitaLegacy/48x48/legacy/emblem-default.png "System Updates" "Your system is up to date."
 fi
