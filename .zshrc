@@ -71,6 +71,9 @@ alias yay-remove-children='yay -Rns $(yay -Qdtq)'
 alias yay-remove-package='yay -Rcns'
 alias reflector-update="sudo reflector --verbose --latest 10 --sort rate --protocol https --save /etc/pacman.d/mirrorlist"
 
+alias ls="exa --icons"
+alias l="exa --icons -a -l"
+
 # zsh-autocomplete optimizations
 zstyle ':autocomplete:*' max-lines 1
 zstyle ':completion:*' use-cache on
