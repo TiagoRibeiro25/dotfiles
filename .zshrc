@@ -66,7 +66,7 @@ source $ZSH/oh-my-zsh.sh
 alias z="zellij"
 alias code="codium"
 alias fonts-reset="sudo fc-cache -f -v"
-alias fastfetch="\fastfetch --config groups.jsonc"
+alias ff="fastfetch --config groups.jsonc"
 alias yay-remove-children='yay -Rns $(yay -Qdtq)'
 alias yay-remove-package='yay -Rcns'
 alias reflector-update="sudo reflector --verbose --latest 10 --sort rate --protocol https --save /etc/pacman.d/mirrorlist"
