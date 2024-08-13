@@ -8,6 +8,8 @@ Code Cache
 Crashpad
 databases
 DawnCache
+DawnGraphiteCache
+DawnWebGPUCache
 Dictionaries
 GPUCache
 Local Storage
