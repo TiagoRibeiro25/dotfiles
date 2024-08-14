@@ -8,7 +8,6 @@ usage() {
 # Get value of argument (action: start|stop)
 action=$1
 
-
 # Check if the argument is empty
 if [ -z "$action" ]; then
     usage
