@@ -29,6 +29,7 @@ SharedStorage
 TransportSecurity
 Trust Tokens
 Trust Tokens-journal
+code.lock
 
 User/globalStorage
 User/History
