@@ -2,7 +2,7 @@
 
 # Check if hyprlock is running through pid, if not start it
 if [ ! -f /tmp/hyprlock.pid ]; then
-    playerctl stop
-    hyprlock --immediate 
+    # playerctl stop
+   	hyprlock --immediate 
 fi
 
