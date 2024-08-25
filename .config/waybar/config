@@ -20,6 +20,7 @@
 		"bluetooth",
 		"custom/clipboard",
 		"custom/colorpicker",
+		"idle_inhibitor",
 		"custom/notification",
 		"battery",
 		"custom/powermenu"
@@ -84,6 +85,14 @@
 		],
 		"on-scroll-up": "brightnessctl s +5%",
 		"on-scroll-down": "brightnessctl s 5%-"
+	},
+	"idle_inhibitor": {
+		"format": "{icon}",
+		"format-icons": {
+			"activated": "",
+			"deactivated": ""
+		},
+		"timeout": 30.5
 	},
 	"battery": {
 		"interval": 25,

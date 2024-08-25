@@ -87,6 +87,7 @@ window#waybar {
 #bluetooth,
 #custom-colorpicker,
 #custom-clipboard,
+#idle_inhibitor,
 #custom-notification {
 	padding: 5px 8px;
 	border-style: solid;
