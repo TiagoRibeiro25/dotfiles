@@ -14,6 +14,7 @@ if [ $HYPRGAMEMODE = 1 ]; then
         keyword decoration:rounding 0"
     hyprctl notify -1 2500 "rgb(26ff00)" "fontsize:25 Game mode enabled"
     hyprshade on gaming
+	exec-once = hyprpm reload -n # Load hyprland plugins (cs resolution fix)
 else
 	hyprctl reload
     ~/.config/hypr/scripts/autostart start
