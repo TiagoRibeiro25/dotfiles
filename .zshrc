@@ -71,6 +71,7 @@ alias yay-remove-children='yay -Rns $(yay -Qdtq)'
 alias yay-remove-package='yay -Rcns'
 alias reflector-update="sudo reflector --verbose --latest 10 --sort rate --protocol https --save /etc/pacman.d/mirrorlist"
 alias hi="bat ~/.zsh_history"
+alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 
 alias start-vmware-services="systemctl start vmware-networks.service vmware-usbarbitrator.service"
 alias stop-vmware-services="systemctl stop vmware-networks.service vmware-usbarbitrator.service"
