@@ -18,7 +18,6 @@ if [ $HYPRGAMEMODE = 1 ]; then
 else
 	hyprctl reload
     ~/.config/hypr/scripts/autostart start
-    # notify-send -i /usr/share/icons/AdwaitaLegacy/48x48/devices/input-gaming.png "Game Mode" "Game mode has been disabled."
     hyprctl notify -1 2500 "rgb(ff0000)" "fontsize:25 Game mode disabled"
     hyprshade on default
 fi

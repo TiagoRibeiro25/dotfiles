@@ -19,6 +19,7 @@ if [ "$action" == "start" ]; then
     hyprctl dispatch exec hypridle &
     hyprctl dispatch exec swaync &
     hyprctl dispatch exec [workspace 8 silent] thunderbird
+    hyprctl dispatch exec [workspace 7 silent] vesktop --start-minimized
 elif [ "$action" == "stop" ]; then
 	killall waybar
     killall hyprpaper

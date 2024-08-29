@@ -1,7 +1,5 @@
 #!/bin/bash
 
-sleep 20
-
 # Run yay to check for updates and store the output
 update_count=$(yay -Qu 2>/dev/null | wc -l)
 
