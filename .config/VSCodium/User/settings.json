@@ -116,5 +116,8 @@
 	"workbench.tree.indent": 15,
 	"window.menuBarVisibility": "toggle",
 	"window.zoomLevel": 1,
-	"workbench.iconTheme": "bearded-icons"
+	"workbench.iconTheme": "bearded-icons",
+	"[shellscript]": {
+		"editor.defaultFormatter": "foxundermoon.shell-format"
+	}
 }
