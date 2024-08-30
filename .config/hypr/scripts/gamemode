@@ -3,8 +3,8 @@ HYPRGAMEMODE=$(hyprctl getoption animations:enabled | sed -n '1p' | awk '{print 
 
 # Hyprland performance
 if [ $HYPRGAMEMODE = 1 ]; then
-    ~/.config/hypr/scripts/autostart stop
-	hyprctl --batch "\
+    ~/.config/hypr/scripts/autostart start-gaming
+    hyprctl --batch "\
         keyword animations:enabled 0;\
         keyword decoration:drop_shadow 0;\
         keyword decoration:blur:enabled 0;\
@@ -14,10 +14,10 @@ if [ $HYPRGAMEMODE = 1 ]; then
         keyword decoration:rounding 0"
     hyprctl notify -1 2500 "rgb(26ff00)" "fontsize:25 Game mode enabled"
     hyprshade on gaming
-	exec-once = hyprpm reload -n # Load hyprland plugins (cs resolution fix)
+    exec-once = hyprpm reload -n # Load hyprland plugins (cs resolution fix)
 else
-	hyprctl reload
-    ~/.config/hypr/scripts/autostart start
+    hyprctl reload
+    ~/.config/hypr/scripts/autostart stop-gaming
     hyprctl notify -1 2500 "rgb(ff0000)" "fontsize:25 Game mode disabled"
     hyprshade on default
 fi

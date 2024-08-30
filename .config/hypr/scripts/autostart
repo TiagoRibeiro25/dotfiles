@@ -1,34 +1,58 @@
 #!/bin/bash
 
 usage() {
-    echo "Usage: autostart [start|stop]"
+    echo "Usage: autostart [start|stop|start-gaming|stop-gaming]"
     exit 1
 }
 
-# Get value of argument (action: start|stop)
+# Get value of argument (action: start|stop|start-gaming|stop-gaming)
 action=$1
 
-# Check if the argument is empty
-if [ -z "$action" ]; then
-    usage
-fi
+if [ "$action" == "start" -o "$action" == "stop-gaming" ]; then
+    echo "Starting services..."
 
-if [ "$action" == "start" ]; then
-	hyprctl dispatch exec waybar &
+    echo "Starting waybar..."
+    hyprctl dispatch exec waybar &
+
+    echo "Starting hyprpaper..."
     hyprctl dispatch exec hyprpaper &
+
+    echo "Starting hypridle..."
     hyprctl dispatch exec hypridle &
+
+    echo "Starting swaync..."
     hyprctl dispatch exec swaync &
+
+    echo "Launching thunderbird..."
     hyprctl dispatch exec [workspace 8 silent] thunderbird
-    hyprctl dispatch exec [workspace 7 silent] vesktop
-    echo "Hello"
-elif [ "$action" == "stop" ]; then
-	killall waybar
+
+    if [ "$action" == "start" ]; then
+        echo "Starting vesktop..."
+        vesktop --start-minimized
+    fi
+elif [ "$action" == "stop" -o "$action" == "start-gaming" ]; then
+    echo "Stopping services..."
+
+    echo "Killing waybar, hyprpaper, hypridle, swaync, and thunderbird..."
+    killall waybar
     killall hyprpaper
     killall hypridle
     killall swaync
     killall thunderbird
+
+    if [ "$action" == "stop" ]; then
+        pid=$(hyprctl clients | awk '/class: vesktop/{flag=1;next}/pid:/{if(flag){print $2;exit}}')
+
+        # Kill vesktop if it is running
+        if [ -n "$pid" ]; then
+            echo "Vesktop is running with pid: $pid"
+            echo "Killing vesktop..."
+            kill $pid
+        else
+            echo "Vesktop is not running"
+        fi
+    fi
 else
     echo "Invalid action: $action"
     usage
 fi
-

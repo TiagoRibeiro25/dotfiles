@@ -606,9 +606,6 @@
         "WebRichPresence (arRPC)": {
             "enabled": false
         },
-        "ShowAllRoles": {
-            "enabled": false
-        },
         "WebKeybinds": {
             "enabled": true
         },
@@ -624,6 +621,9 @@
         },
         "YoutubeAdblock": {
             "enabled": true
+        },
+        "AlwaysExpandRoles": {
+            "enabled": false
         }
     },
     "notifications": {
@@ -636,6 +636,6 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1722541602593
+        "settingsSyncVersion": 1724935920770
     }
 }
