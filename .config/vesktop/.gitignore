@@ -2,3 +2,5 @@ vencordDist
 sessionData
 Crashpad
 state.json
+
+Singleton*
