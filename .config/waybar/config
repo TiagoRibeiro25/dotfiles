@@ -12,6 +12,7 @@
 	],
 	"modules-right": [
 		"tray",
+		"custom/dsbattery",
 		"cpu",
 		"memory",
 		//"backlight",
@@ -59,6 +60,13 @@
 		"format": "{:%H:%M | %b. %d. %A}",
 		"interval": 1
 	},
+	"custom/dsbattery": {
+		"format": "{}",
+		"interval": 1,
+		"escape": true,
+		"exec": "dsbattery",
+		"on-click-right": "dsbattery -d"
+    },
 	"cpu": {
 		"interval": 2,
 		"format": " {usage}%",
