@@ -11,6 +11,9 @@
 	"[prisma]": {
 		"editor.defaultFormatter": "Prisma.prisma"
 	},
+	"[shellscript]": {
+		"editor.defaultFormatter": "foxundermoon.shell-format"
+	},
 	"codesnap.shutterAction": "copy",
 	"diffEditor.codeLens": false,
 	"editor.accessibilitySupport": "off",
@@ -22,7 +25,6 @@
 	"editor.cursorWidth": 6,
 	"editor.defaultFormatter": "esbenp.prettier-vscode",
 	"editor.fontFamily": "JetBrains Mono",
-	// "editor.fontFamily": "CaskaydiaCove Nerd Font",
 	"editor.fontLigatures": true,
 	"editor.fontSize": 14,
 	"editor.fontWeight": "400",
@@ -80,11 +82,11 @@
 	"prettier.useTabs": true,
 	"prettier.vueIndentScriptAndStyle": true,
 	"search.exclude": {
-		"**/node_modules": true,
-		"**/dist": true,
-		"**/build": true,
+		"**/.DS_Store": true,
 		"**/.git": true,
-		"**/.DS_Store": true
+		"**/build": true,
+		"**/dist": true,
+		"**/node_modules": true
 	},
 	"security.workspace.trust.untrustedFiles": "open",
 	"telemetry.telemetryLevel": "off",
@@ -109,15 +111,13 @@
 	"typescript.inlayHints.parameterTypes.enabled": true,
 	"typescript.preferences.renameMatchingJsxTags": true,
 	"typescript.updateImportsOnFileMove.enabled": "always",
+	"window.menuBarVisibility": "toggle",
+	"window.zoomLevel": 1,
 	"workbench.editor.wrapTabs": true,
+	"workbench.iconTheme": "bearded-icons",
 	"workbench.list.smoothScrolling": true,
 	"workbench.sideBar.location": "right",
 	"workbench.startupEditor": "none",
 	"workbench.tree.indent": 15,
-	"window.menuBarVisibility": "toggle",
-	"window.zoomLevel": 1,
-	"workbench.iconTheme": "bearded-icons",
-	"[shellscript]": {
-		"editor.defaultFormatter": "foxundermoon.shell-format"
-	}
+	"workbench.colorTheme": "Gruvbox Dark Hard"
 }
