@@ -64,6 +64,7 @@ hyprwayland-scanner
 intel-media-driver
 intel-ucode
 iwd
+iwgtk
 keepassxc
 lib32-mangohud
 lib32-nvidia-utils
@@ -108,6 +109,7 @@ pipewire-jack
 pipewire-pulse
 pipewire-v4l2
 pkgfile
+plymouth
 postman-bin
 powertop
 protonhax
@@ -120,7 +122,6 @@ redisinsight-bin
 reflector
 rofi-wayland
 rofimoji
-samrewritten-git
 seahorse
 smartmontools
 spicetify-cli
@@ -140,9 +141,7 @@ thunderbird
 timeshift
 tlpui
 trash-cli
-ttf-dejavu
-ttf-ms-fonts
-ttf-roboto
+ttf-ms-win11-auto
 tumbler
 unrar
 vesktop
