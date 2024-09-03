@@ -10,13 +10,14 @@
 	"logo": {
 		"source": "arch_small", // search for logos: fastfetch --list-logos or --print-logos
 		"padding": {
-			"top": 1,
+			"top": 2,
 		},
 	},
 	"display": {
 		"separator": " ",
 	},
 	"modules": [
+		"break",
 		"break",
 		"title",
 		{
@@ -56,6 +57,7 @@
 			"key": "󰝚 ",
 			"keyColor": "33",
 		},
+		"break",
 		"break",
 	],
 }
