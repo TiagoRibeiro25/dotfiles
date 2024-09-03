@@ -14,15 +14,12 @@ fi
 
 if [ "$action" == "play-pause" ]; then
     playerctl play-pause
-    # notify-send -i multimedia-player "Media Player" "Music/Video has been toggled"
     hyprctl notify -1 2500 "rgb(D9BE8E)" "fontsize:20 Music/Video has been toggled"
 elif [ "$action" == "next" ]; then
     playerctl next
-    # notify-send -i multimedia-player "Media Player" "Next track"
     hyprctl notify -1 2000 "rgb(D9BE8E)" "fontsize:20 Next track"
 elif [ "$action" == "previous" ]; then
     playerctl previous
-    # notify-send -i multimedia-player "Media Player" "Previous track"
     hypctl notify -1 2000 "rgb(D9BE8E)" "fontsize:20 Previous track"
 else
     echo "Invalid action: $action"

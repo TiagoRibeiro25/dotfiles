@@ -12,12 +12,12 @@ if [ $HYPRGAMEMODE = 1 ]; then
         keyword general:gaps_out 0;\
         keyword general:border_size 1;\
         keyword decoration:rounding 0"
-    hyprctl notify -1 2500 "rgb(26ff00)" "fontsize:25 Game mode enabled"
-    hyprshade on gaming
+    hyprshade on gaming          # Enable gaming color profile
     exec-once = hyprpm reload -n # Load hyprland plugins (cs resolution fix)
+    hyprctl notify -1 2500 "rgb(26ff00)" "fontsize:25 Game mode enabled"
 else
     hyprctl reload
     ~/.config/hypr/scripts/autostart stop-gaming
-    hyprctl notify -1 2500 "rgb(ff0000)" "fontsize:25 Game mode disabled"
     hyprshade on default
+    hyprctl notify -1 2500 "rgb(ff0000)" "fontsize:25 Game mode disabled"
 fi
