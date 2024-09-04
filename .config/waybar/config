@@ -24,7 +24,8 @@
 	],
 	"hyprland/window": {
 		"icon": true,
-		"max-length": 110
+		"max-length": 110,
+		"icon-size": 15
 	},
 	"custom/spotify": {
 		"exec": "/usr/bin/python3 /home/tiago/.config/waybar/modules/mediaplayer.py --player spotify",
