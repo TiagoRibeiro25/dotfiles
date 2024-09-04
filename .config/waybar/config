@@ -4,35 +4,53 @@
 	"margin": "0 0 0 0",
 	"modules-left": [
 		"custom/launcher",
-		"clock",
+		"hyprland/workspaces",
+		"custom/spotify",
 		"hyprland/window"
 	],
-	"modules-center": [
-		"hyprland/workspaces"
-	],
+	"modules-center": [],
 	"modules-right": [
 		"tray",
 		"custom/dsbattery",
+		"network",
+		"temperature",
 		"cpu",
 		"memory",
-		//"backlight",
-		//"pulseaudio",
-		"network",
-		//"bluetooth",
+		"battery",
 		"custom/clipboard",
 		"custom/colorpicker",
-		"idle_inhibitor",
 		"custom/notification",
-		"battery",
-		"custom/powermenu"
+		"clock"
 	],
 	"hyprland/window": {
 		"icon": true,
 		"max-length": 110
 	},
+	"custom/spotify": {
+		"exec": "/usr/bin/python3 /home/tiago/.config/waybar/modules/mediaplayer.py --player spotify",
+		"format": "{} ",
+		"return-type": "json",
+		"on-click": "playerctl play-pause",
+		"on-scroll-up": "playerctl next",
+		"on-scroll-down": "playerctl previous"
+	},
 	"tray": {
-		"icon-size": 18,
+		"icon-size": 15,
 		"spacing": 5
+	},
+	"temperature": {
+		"interval": 4,
+		"hwmon-path": "/sys/devices/platform/coretemp.0/hwmon/hwmon6/temp1_input",
+		"critical-threshold": 80,
+		"format-critical": " {temperatureC}°C",
+		"format": "{icon} {temperatureC}°C",
+		"format-icons": [
+			"",
+			"",
+			""
+		],
+		"max-length": 7,
+		"min-length": 7
 	},
 	"clock": {
 		"tooltip-format": "<tt><small>{calendar}</small></tt>",
@@ -66,9 +84,9 @@
 		"escape": true,
 		"exec": "dsbattery",
 		"on-click-right": "dsbattery -d"
-    },
+	},
 	"cpu": {
-		"interval": 2,
+		"interval": 4,
 		"format": " {usage}%",
 		"states": {
 			"warning": 70,
@@ -77,30 +95,13 @@
 		"on-click": "gnome-system-monitor"
 	},
 	"memory": {
-		"interval": 2,
+		"interval": 4,
 		"format": " {}%",
 		"states": {
 			"warning": 70,
 			"critical": 90
 		},
 		"on-click": "gnome-system-monitor"
-	},
-	"backlight": {
-		"format": "{icon} {percent}%",
-		"format-icons": [
-			"",
-			""
-		],
-		"on-scroll-up": "brightnessctl s +5%",
-		"on-scroll-down": "brightnessctl s 5%-"
-	},
-	"idle_inhibitor": {
-		"format": "{icon}",
-		"format-icons": {
-			"activated": "",
-			"deactivated": ""
-		},
-		"timeout": 30.5
 	},
 	"battery": {
 		"interval": 25,
@@ -128,36 +129,6 @@
 		"format-linked": "󰇄 {ifname} (No IP)",
 		"tooltip-format": " {ifname}: {essid} - {ipaddr} ",
 		"on-click": "nm-connection-editor"
-	},
-	"pulseaudio": {
-		"format": "{icon} {volume}%",
-		"format-bluetooth": "{icon} {volume}%",
-		"format-muted": " Muted",
-		"format-muted-bluetooth": " Muted",
-		"on-click": "pavucontrol",
-		"on-click-right": "~/.config/hypr/scripts/volume toggle-mute",
-		"on-scroll-up": "~/.config/hypr/scripts/volume up",
-		"on-scroll-down": "~/.config/hypr/scripts/volume down",
-		"tooltip-format": "{icon} {volume}% {device}",
-		"tooltip-format-muted": "Muted {device}",
-		"format-icons": {
-			"headphones": " ",
-			"phone": "",
-			"portable": "",
-			"car": " ",
-			"default": [
-				"",
-				" "
-			]
-		}
-	},
-	"bluetooth": {
-		"format": "󰂯",
-		"format-disabled": "",
-		"interval": 30,
-		"on-click": "blueman-manager",
-		"on-click-right": "~/.config/hypr/scripts/bluetooth",
-		"tooltip-format": "{}"
 	},
 	"custom/notification": {
 		"tooltip": false,
@@ -193,11 +164,7 @@
 	"custom/launcher": {
 		"format": "",
 		"on-click": "rofi -show drun",
-		"tooltip": false
-	},
-	"custom/powermenu": {
-		"format": "",
-		"on-click": "~/.config/hypr/scripts/rofi_powermenu",
+		"on-right-click": "~/.config/hypr/scripts/rofi_powermenu",
 		"tooltip": false
 	}
 }
