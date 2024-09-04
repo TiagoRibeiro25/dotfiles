@@ -31,9 +31,9 @@
 		"exec": "/usr/bin/python3 /home/tiago/.config/waybar/modules/mediaplayer.py --player spotify",
 		"format": "{} ",
 		"return-type": "json",
-		"on-click": "playerctl play-pause",
-		"on-scroll-up": "playerctl next",
-		"on-scroll-down": "playerctl previous"
+		"on-click": "~/.config/hypr/scripts/mediaplayer play-pause",
+		"on-scroll-up": "~/.config/hypr/scripts/mediaplayer next",
+		"on-scroll-down": "~/.config/hypr/scripts/mediaplayer previous"
 	},
 	"tray": {
 		"icon-size": 15,
@@ -81,7 +81,7 @@
 	},
 	"custom/dsbattery": {
 		"format": "{}",
-		"interval": 10,
+		"interval": 5,
 		"escape": true,
 		"exec": "dsbattery",
 		"on-click-right": "dsbattery -d"
