@@ -14,6 +14,11 @@
 	"[shellscript]": {
 		"editor.defaultFormatter": "foxundermoon.shell-format"
 	},
+	"apc.stylesheet": {
+		"*": {
+			"font-family": "JetBrains Mono"
+		}
+	},
 	"codesnap.shutterAction": "copy",
 	"diffEditor.codeLens": false,
 	"editor.accessibilitySupport": "off",
@@ -24,16 +29,12 @@
 	"editor.cursorBlinking": "smooth",
 	"editor.cursorWidth": 6,
 	"editor.defaultFormatter": "esbenp.prettier-vscode",
-	"editor.fontFamily": "JetBrains Mono",
 	"editor.fontLigatures": true,
-	"editor.fontSize": 14,
-	"editor.fontWeight": "400",
 	"editor.formatOnSave": true,
 	"editor.guides.bracketPairs": "active",
 	"editor.guides.bracketPairsHorizontal": true,
 	"editor.inlayHints.fontSize": 12,
 	"editor.inlineSuggest.enabled": true,
-	"editor.lineHeight": 20,
 	"editor.linkedEditing": true,
 	"editor.maxTokenizationLineLength": 1000,
 	"editor.minimap.enabled": true,
@@ -45,9 +46,8 @@
 	"editor.stickyTabStops": true,
 	"editor.suggest.showWords": true,
 	"editor.suggestSelection": "first",
-	"editor.tabSize": 4,
+	"editor.tabSize": 3,
 	"editor.wordWrap": "on",
-	"errorLens.fontSize": "12px",
 	"explorer.compactFolders": false,
 	"explorer.confirmDelete": false,
 	"explorer.confirmDragAndDrop": false,
@@ -78,7 +78,7 @@
 	"prettier.bracketSameLine": false,
 	"prettier.bracketSpacing": true,
 	"prettier.printWidth": 95,
-	"prettier.tabWidth": 2,
+	"prettier.tabWidth": 3,
 	"prettier.useTabs": true,
 	"prettier.vueIndentScriptAndStyle": true,
 	"search.exclude": {
@@ -89,7 +89,6 @@
 		"**/node_modules": true
 	},
 	"security.workspace.trust.untrustedFiles": "open",
-	"telemetry.telemetryLevel": "off",
 	"template-string-converter.autoRemoveTemplateString": true,
 	"template-string-converter.validLanguages": [
 		"svelte",
@@ -100,12 +99,10 @@
 		"vue"
 	],
 	"terminal.integrated.cursorBlinking": true,
-	"terminal.integrated.cursorStyle": "line",
 	"terminal.integrated.cursorWidth": 5,
 	"terminal.integrated.fontFamily": "CaskaydiaCove Nerd Font",
 	"terminal.integrated.fontSize": 13,
 	"terminal.integrated.gpuAcceleration": "on",
-	"terminal.integrated.scrollback": 500,
 	"terminal.integrated.smoothScrolling": true,
 	"typescript.inlayHints.parameterNames.enabled": "all",
 	"typescript.inlayHints.parameterTypes.enabled": true,
@@ -113,11 +110,14 @@
 	"typescript.updateImportsOnFileMove.enabled": "always",
 	"window.menuBarVisibility": "toggle",
 	"window.zoomLevel": 1,
+	"workbench.colorTheme": "Gruvbox Dark Hard",
 	"workbench.editor.wrapTabs": true,
 	"workbench.iconTheme": "bearded-icons",
 	"workbench.list.smoothScrolling": true,
 	"workbench.sideBar.location": "right",
 	"workbench.startupEditor": "none",
 	"workbench.tree.indent": 15,
-	"workbench.colorTheme": "Gruvbox Dark Hard"
+	"[properties]": {
+		"editor.defaultFormatter": "foxundermoon.shell-format"
+	}
 }
