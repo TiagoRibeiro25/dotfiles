@@ -138,6 +138,11 @@ window#waybar {
 	margin-right: 10px;
 }
 
+#network {
+	margin-left: -7px;
+	margin-right: 7px;
+}
+
 #network.disabled {
 	color: @red;
 }

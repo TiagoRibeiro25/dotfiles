@@ -18,7 +18,7 @@
 		//"backlight",
 		//"pulseaudio",
 		"network",
-		"bluetooth",
+		//"bluetooth",
 		"custom/clipboard",
 		"custom/colorpicker",
 		"idle_inhibitor",
@@ -62,7 +62,7 @@
 	},
 	"custom/dsbattery": {
 		"format": "{}",
-		"interval": 1,
+		"interval": 10,
 		"escape": true,
 		"exec": "dsbattery",
 		"on-click-right": "dsbattery -d"
@@ -152,7 +152,7 @@
 		}
 	},
 	"bluetooth": {
-		"format": "",
+		"format": "󰂯",
 		"format-disabled": "",
 		"interval": 30,
 		"on-click": "blueman-manager",
