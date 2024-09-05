@@ -4,7 +4,7 @@ configuration{
     font: "CaskaydiaCove Nerd Font 13";
     show-icons: true;
     icon-theme: "Tela-dark";
-    terminal: "alacritty";
+    terminal: "kitty";
     drun-display-format: "{icon} {name}";
     location: 0;
     disable-history: false;
