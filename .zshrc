@@ -34,7 +34,7 @@ plugins=(
 # Environment variables
 export ZSH="$HOME/.oh-my-zsh" # Path to your Oh My Zsh installation.
 export ZSH_THEME="powerlevel10k/powerlevel10k"
-export EDITOR='mousepad' # Preferred editor for local and remote sessions
+export EDITOR='nano' # Preferred editor for local and remote sessions
 # Android Emulator
 export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
@@ -42,6 +42,7 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # Custom aliases
 alias z="zellij"
+alias y="yazi"
 alias code="codium"
 alias fonts-reset="sudo fc-cache -f -v"
 alias ff="fastfetch --config groups.jsonc"
