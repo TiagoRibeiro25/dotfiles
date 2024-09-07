@@ -2,17 +2,12 @@
 
 sleep 4
 killall xdg-desktop-portal-hyprland
-killall xdg-desktop-portal-wlr
+killall xdg-desktop-portal-gtk
 killall xdg-desktop-portal
 sleep 4
 
-# Use different directory on NixOS
-if [ -d /run/current-system/sw/libexec ]; then
-    libDir=/run/current-system/sw/libexec
-else
-    libDir=/usr/lib
-fi
+libDir=/usr/lib
 
 $libDir/xdg-desktop-portal-hyprland &
-sleep 4
-$libDir/xdg-desktop-portal &
+# $libDir/xdg-desktop-portal-gtk &
+# $libDir/xdg-desktop-portal &
