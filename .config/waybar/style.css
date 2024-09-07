@@ -15,22 +15,20 @@
 	border: 0;
 	border-radius: 0;
 	padding: 0 0;
-	font-family: "CaskaydiaCove Nerd Font";
-	font-size: 13px;
+	font-family: "Noto Sans Mono";
+	font-size: 14px;
 	padding-top: 1px;
 	transition: all 0.5s ease;
 }
 
 window#waybar {
 	background-color: @black;
-	opacity: 0.95;
+	opacity: 0.9;
 }
 
 #workspaces button {
 	color: @black;
-	margin-left: 1px;
-	margin-right: 1px;
-	padding: 2 0 3 0;
+	padding-bottom: 3px;
 	opacity: 0.7;
 }
 
@@ -63,7 +61,7 @@ window#waybar {
 #workspaces {
 	border-style: solid;
 	opacity: 1;
-	margin: 0px 10px 0px 10px;
+	margin: 0px 5px 0px 5px;
 }
 
 #clock,
@@ -81,15 +79,18 @@ window#waybar {
 	padding: 5px 8px;
 	border-style: solid;
 	opacity: 1;
+	margin: 0px 1px 0px 1px;
+}
+
+#network,
+#temperature,
+#custom-colorpicker,
+#custom-spotify {
 	margin: 0px 0px 0px 0px;
 }
 
 #clock {
 	margin-right: 10px;
-}
-
-#custom-spotify {
-	margin: 2px 5px 0px 5px;
 }
 
 #temperature {

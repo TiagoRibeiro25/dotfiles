@@ -1,5 +1,5 @@
 /* Text Font */
 
 * {
-    font: "CaskaydiaCove Nerd Font 12";
+	font-family: "Noto Sans Mono";
 }

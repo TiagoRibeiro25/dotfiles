@@ -6,11 +6,11 @@ My dotfiles for my Arch Linux setup.
 
 - **OS**: Arch Linux
 - **WM**: Hyprland
-- **Terminal**: Alacritty
+- **Terminal**: Kitty
 - **Shell**: Zsh w/Oh-My-Zsh
 - **File Manager**: Thunar
 - **Browser**: Brave
-- **Font**: CaskaydiaCove Nerd Font
+- **Font**: Noto Sans Mono
 
 <img src="./Screenshots/screenshot_1.png" alt="Screenshot" width="800">
 <img src="./Screenshots/screenshot_2.png" alt="Screenshot" width="800">

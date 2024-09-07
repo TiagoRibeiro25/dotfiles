@@ -1,7 +1,6 @@
 configuration{
     modi: "run,drun,window";
     lines: 6;
-    font: "CaskaydiaCove Nerd Font 13";
     show-icons: true;
     icon-theme: "Tela-dark";
     terminal: "kitty";
