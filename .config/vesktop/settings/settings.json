@@ -4,7 +4,7 @@
     "useQuickCss": true,
     "themeLinks": [],
     "enabledThemes": [
-        "Ultra.theme.css"
+        "midnight-vencord.theme.css"
     ],
     "enableReactDevtools": false,
     "frameless": false,
@@ -247,7 +247,8 @@
             "ignoreChannels": "",
             "ignoreGuilds": "",
             "logEdits": true,
-            "logDeletes": true
+            "logDeletes": true,
+            "collapseDeleted": false
         },
         "MessageTags": {
             "enabled": false
@@ -624,6 +625,18 @@
         },
         "AlwaysExpandRoles": {
             "enabled": false
+        },
+        "CopyFileContents": {
+            "enabled": false
+        },
+        "MentionAvatars": {
+            "enabled": false
+        },
+        "NoMaskedUrlPaste": {
+            "enabled": false
+        },
+        "StickerPaste": {
+            "enabled": false
         }
     },
     "notifications": {
@@ -636,6 +649,6 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1724935920770
+        "settingsSyncVersion": 1725754544978
     }
 }
