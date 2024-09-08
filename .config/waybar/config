@@ -5,7 +5,7 @@
 	"modules-left": [
 		"custom/launcher",
 		"hyprland/workspaces",
-		"custom/spotify",
+		//"custom/spotify",
 		"hyprland/window"
 	],
 	"modules-center": [],
