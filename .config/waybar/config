@@ -76,12 +76,13 @@
 			"on-scroll-up": "shift_up",
 			"on-scroll-down": "shift_down"
 		},
-		"format": "{:%H:%M | %b. %d. %A}",
+		//"format": "{:%H:%M | %b. %d. %A}",
+		"format": " {:%H:%M}",
 		"interval": 1
 	},
 	"custom/dsbattery": {
 		"format": "{}",
-		"interval": 5,
+		"interval": 10,
 		"escape": true,
 		"exec": "dsbattery",
 		"on-click-right": "dsbattery -d"
@@ -97,7 +98,7 @@
 	},
 	"memory": {
 		"interval": 4,
-		"format": " {}%",
+		"format": "  {used}/{total}GB",
 		"states": {
 			"warning": 70,
 			"critical": 90
@@ -123,12 +124,12 @@
 		"tooltip": true
 	},
 	"network": {
-		"interval": 30,
-		"format-wifi": "  Wifi | {signalStrength}%",
+		"interval": 8,
+		"format-wifi": "  Wifi",
 		"format-ethernet": "󱎔 Wired",
 		"format-disconnected": "⚠ Disconnected",
 		"format-linked": "󰇄 {ifname} (No IP)",
-		"tooltip-format": " {ifname}: {essid} - {ipaddr} ",
+		"tooltip-format": " {ifname}: {essid} {signalStrength}% - {ipaddr} ",
 		"on-click": "nm-connection-editor"
 	},
 	"custom/notification": {
