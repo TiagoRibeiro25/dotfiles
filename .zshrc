@@ -25,9 +25,11 @@ plugins=(
   npm
   nvm
   sudo
+  thefuck
+  you-should-use
+  zoxide
   #zsh-autocomplete
   zsh-autosuggestions
-  you-should-use
   zsh-syntax-highlighting
 )
 
@@ -41,8 +43,9 @@ export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # Custom aliases
-alias z="zellij"
+alias cd="z"
 alias y="yazi"
+alias fk="fuck"
 alias code="codium"
 alias fonts-reset="sudo fc-cache -f -v"
 alias ff="fastfetch --config groups.jsonc"
