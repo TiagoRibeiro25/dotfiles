@@ -9,5 +9,5 @@ sleep 4
 libDir=/usr/lib
 
 $libDir/xdg-desktop-portal-hyprland &
-# $libDir/xdg-desktop-portal-gtk &
-# $libDir/xdg-desktop-portal &
+$libDir/xdg-desktop-portal-gtk &
+$libDir/xdg-desktop-portal &
