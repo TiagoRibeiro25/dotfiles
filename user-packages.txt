@@ -13,9 +13,8 @@ brightnessctl
 btop
 chaotic-keyring
 chaotic-mirrorlist
-cliphist
+clipse-bin
 cmake
-cmatrix
 cpio
 cups
 cups-browsed
@@ -44,6 +43,7 @@ gnome-disk-utility
 gnome-font-viewer
 gnome-keyring
 gnome-system-monitor
+go
 goverlay
 gpu-screen-recorder-gtk-git
 grub
@@ -61,7 +61,6 @@ hyprpaper
 hyprpicker
 hyprshade
 hyprshot
-hyprshot-gui-git
 hyprutils
 hyprwayland-scanner
 imagemagick
@@ -163,6 +162,7 @@ waybar
 webapp-manager
 wget
 wireless_tools
+wl-clip-persist
 xarchiver
 xdg-desktop-portal-gtk
 xdg-desktop-portal-hyprland
