@@ -15,7 +15,6 @@ if [ -z "$action" ]; then
 fi
 
 if [ "$action" == "history" ]; then
-    # cliphist list | rofi -dmenu -p "Clipboard" -i -theme "$HOME/.config/rofi/clip.rasi"| cliphist decode | wl-copy
     $TERMINAL --class clipse -e 'clipse'
 elif [ "$action" == "clear" ]; then
     clipse -clear
