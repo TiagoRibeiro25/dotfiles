@@ -1,5 +1,7 @@
-clear
-fastfetch --config osv2.jsonc
+# Check if the terminal is kitty
+if [ "$TERM" = "xterm-kitty" ]; then
+  fastfetch --config osv2.jsonc
+fi
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
@@ -37,10 +39,14 @@ plugins=(
 export ZSH="$HOME/.oh-my-zsh" # Path to your Oh My Zsh installation.
 export ZSH_THEME="powerlevel10k/powerlevel10k"
 export EDITOR='nano' # Preferred editor for local and remote sessions
+
 # Android Emulator
 export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/platform-tools
+
+# Source Oh My Zsh
+source $ZSH/oh-my-zsh.sh
 
 # Custom aliases
 alias cd="z"
@@ -49,7 +55,7 @@ alias fk="fuck"
 alias code="codium"
 alias fonts-reset="sudo fc-cache -f -v"
 alias ff="fastfetch --config groups.jsonc"
-alias yay-remove-children='yay -Rns $(yay -Qdtq)'
+alias yay-remove-children='yay -Rcns $(yay -Qdtq)'
 alias yay-remove-package='yay -Rcns'
 alias reflector-update="sudo reflector --verbose --latest 10 --sort rate --protocol https --save /etc/pacman.d/mirrorlist"
 alias hi="bat ~/.zsh_history"
@@ -67,9 +73,6 @@ zstyle ':omz:update' frequency 7
 # zsh-autocomplete optimizations
 zstyle ':autocomplete:*' max-lines 1
 zstyle ':completion:*' use-cache on
-
-# Source Oh My Zsh
-source $ZSH/oh-my-zsh.sh
 
 # Source Powerlevel10k configuration
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
