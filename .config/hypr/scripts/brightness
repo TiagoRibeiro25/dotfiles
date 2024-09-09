@@ -1,11 +1,11 @@
 #!/bin/bash
 
 usage() {
-    echo "Usage: brightness [up|down]"
+    echo "Usage: brightness [up|down|idle|restore-idle]"
     exit 1
 }
 
-# Get value of argument (action: up, down)
+# Get value of argument (action: up, down,idle,restore-idle)
 action=$1
 
 if [ -z "$action" ]; then
@@ -14,23 +14,34 @@ fi
 
 MAX_BRIGHTNESS=$(brightnessctl | grep -oP 'Max brightness: \K\d+')
 CURRENT_BRIGHTNESS=$(brightnessctl | grep -oP 'Current brightness: \K\d+')
+CURRENT_BRIGHTNESS_PERCENTAGE=$((CURRENT_BRIGHTNESS * 100 / MAX_BRIGHTNESS))
+LOWEST_BRIGHTNESS_PERCENTAGE_ALLOWED=5
+IDLE_BRIGHTNESS_PERCENTAGE=5
 
 if [ "$action" == "up" ]; then
     # Check if current brightness is already at max
     if [ "$CURRENT_BRIGHTNESS" -ge "$MAX_BRIGHTNESS" ]; then
+        echo "Brightness is already at maximum level"
         exit 1
     fi
 
+    echo "Increasing brightness by 5%"
     brightnessctl s +5%
-   	#notify-send -i /usr/share/icons/AdwaitaLegacy/48x48/legacy/video-display.png "Monitor" "Brightness increased $(brightnessctl | grep -oP '\(\d+%\)')"
 elif [ "$action" == "down" ]; then
-    # Check if current brightness is already at 0 (minimum)
-    if [ "$CURRENT_BRIGHTNESS" -le 0 ]; then
+    if [ "$CURRENT_BRIGHTNESS_PERCENTAGE" -le "$LOWEST_BRIGHTNESS_PERCENTAGE_ALLOWED" ]; then
+        echo "Brightness is already at lowest level ($LOWEST_BRIGHTNESS_PERCENTAGE_ALLOWED%)"
         exit 1
     fi
 
+    echo "Lowering brightness by 5%"
     brightnessctl s 5%-
-    #notify-send -i /usr/share/icons/AdwaitaLegacy/48x48/legacy/video-display.png "Monitor" "Brightness decreased $(brightnessctl | grep -oP '\(\d+%\)')"
+elif [ "$action" == "idle" ]; then
+    echo "Saving current brightness and setting to 5%"
+    brightnessctl -s
+    brightnessctl s $IDLE_BRIGHTNESS_PERCENTAGE%
+elif [ "$action" == "restore-idle" ]; then
+    echo "Restoring brightness to saved value"
+    brightnessctl -r
 else
     echo "Invalid action: $action"
     usage
