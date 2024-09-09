@@ -1,21 +1,24 @@
 #!/bin/bash
 
 usage() {
-    echo "Usage: clip [clip|clear]"
+    echo "Usage: clip [history|clear]"
     exit 1
 }
 
-# Get value of argument (action: clip, clear)
+TERMINAL="kitty"
+
+# Get value of argument (action: history, clear)
 action=$1
 
 if [ -z "$action" ]; then
     usage
 fi
 
-if [ "$action" == "clip" ]; then
-    cliphist list | rofi -dmenu -p "Clipboard" -i -theme "$HOME/.config/rofi/clip.rasi"| cliphist decode | wl-copy
+if [ "$action" == "history" ]; then
+    # cliphist list | rofi -dmenu -p "Clipboard" -i -theme "$HOME/.config/rofi/clip.rasi"| cliphist decode | wl-copy
+    $TERMINAL --class clipse -e 'clipse'
 elif [ "$action" == "clear" ]; then
-    cliphist wipe
+    clipse -clear
     notify-send -i /usr/share/icons/AdwaitaLegacy/48x48/legacy/edit-clear-all.png "Clipboard" "Clipboard history has been cleared."
 else
     echo "Invalid action: $action"

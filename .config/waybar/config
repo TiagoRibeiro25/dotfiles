@@ -160,7 +160,7 @@
 	"custom/clipboard": {
 		"format": "󰅍",
 		"tooltip": false,
-		"on-click": "~/.config/hypr/scripts/clip clip",
+		"on-click": "~/.config/hypr/scripts/clip history",
 		"on-click-right": "~/.config/hypr/scripts/clip clear"
 	},
 	"custom/launcher": {
