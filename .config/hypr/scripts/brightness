@@ -22,7 +22,7 @@ MAX_BRIGHTNESS=$(brightnessctl | grep -oP 'Max brightness: \K\d+')
 CURRENT_BRIGHTNESS=$(brightnessctl | grep -oP 'Current brightness: \K\d+')
 CURRENT_BRIGHTNESS_PERCENTAGE=$((CURRENT_BRIGHTNESS * 100 / MAX_BRIGHTNESS))
 LOWEST_BRIGHTNESS_PERCENTAGE_ALLOWED=5
-IDLE_BRIGHTNESS_PERCENTAGE=5
+IDLE_BRIGHTNESS_PERCENTAGE=10
 
 if [ "$action" == "up" ] || [ "$action" == "down" ]; then
     # Check if the brightness percentage value is a multiple of 5
