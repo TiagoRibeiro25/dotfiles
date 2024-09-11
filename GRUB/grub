@@ -1,9 +1,9 @@
 # GRUB boot loader configuration
 
 GRUB_DEFAULT=0
-GRUB_TIMEOUT=1
+GRUB_TIMEOUT=3
 GRUB_DISTRIBUTOR="Arch"
-GRUB_CMDLINE_LINUX_DEFAULT="loglevel=3 mitigations=off i915.modeset=1 nvidia-drm.modeset=1 nvidia.NVreg_EnableGpuFirmware=0 zswap.enabled=1 zswap.compressor=lz4 zswap.max_pool_percent=50 zswap.zpool=z3fold resume=UUID=c54069c4-3114-4b3f-8332-676582d6854c resume_offset=15474688"
+GRUB_CMDLINE_LINUX_DEFAULT="loglevel=3 quiet splash mitigations=off i915.modeset=1 nvidia-drm.modeset=1 nvidia_drm.fbdev=1 nvidia.NVreg_EnableGpuFirmware=0 zswap.enabled=1 zswap.compressor=lz4 zswap.max_pool_percent=50 zswap.zpool=z3fold resume=UUID=c54069c4-3114-4b3f-8332-676582d6854c resume_offset=15474688"
 GRUB_CMDLINE_LINUX="rootfstype=ext4"
 
 # Preload both GPT and MBR modules so that they are not missed
