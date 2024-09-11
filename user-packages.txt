@@ -31,10 +31,6 @@ eza
 fastfetch
 firefox
 firewalld
-foomatic-db
-foomatic-db-engine
-foomatic-db-gutenprint-ppds
-foomatic-db-ppds
 freedownloadmanager
 gamemode
 git
@@ -47,10 +43,8 @@ go
 goverlay
 gpu-screen-recorder-gtk-git
 grub
-gsfonts
 gst-libav
 gstreamer-vaapi
-gutenprint
 htop
 hyprcursor
 hypridle
@@ -94,7 +88,7 @@ noto-fonts-cjk
 noto-fonts-emoji
 noto-fonts-extra
 ntfs-3g
-nvidia
+nvidia-dkms
 nvidia-prime
 nvidia-settings
 nvidia-utils
@@ -131,7 +125,6 @@ rofimoji
 seahorse
 smartmontools
 spicetify-cli
-splix
 spotify
 steam
 stremio
@@ -168,7 +161,6 @@ xdg-desktop-portal-gtk
 xdg-desktop-portal-hyprland
 xdg-utils
 yay
-yazi
 zip
 zoxide
 zsh
