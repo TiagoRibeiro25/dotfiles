@@ -2,7 +2,7 @@
 Version=1.0
 Name=ChatGPT
 Comment=Web App
-Exec=brave --app="https://chat.openai.com/chat" --class=WebApp-ChatGPTbrave2851 --name=WebApp-ChatGPTbrave2851
+Exec=brave --app="https://chat.openai.com/chat" --class=WebApp-ChatGPTbrave2851 --name=WebApp-ChatGPTbrave2851 --user-data-dir=/home/tiago/.local/share/ice/profiles/ChatGPTbrave2851
 Terminal=false
 X-MultipleArgs=false
 Type=Application
@@ -16,5 +16,5 @@ X-WebApp-URL=https://chat.openai.com/chat
 X-WebApp-CustomParameters=
 X-WebApp-Navbar=false
 X-WebApp-PrivateWindow=false
-X-WebApp-Isolated=false
+X-WebApp-Isolated=true
 

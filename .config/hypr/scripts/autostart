@@ -23,13 +23,13 @@ if [ "$action" == "start" -o "$action" == "stop-gaming" ]; then
     echo "Starting swaync..."
     hyprctl dispatch exec swaync &
 
-    #echo "Launching thunderbird..."
-    #hyprctl dispatch exec [workspace 8 silent] thunderbird
+    echo "Launching thunderbird..."
+    hyprctl dispatch exec [workspace 8 silent] thunderbird
 
-    #if [ "$action" == "start" ]; then
-    #    echo "Starting vesktop..."
-    #    vesktop --start-minimized
-    #fi
+    if [ "$action" == "start" ]; then
+       echo "Starting vesktop..."
+       vesktop --start-minimized
+    fi
 elif [ "$action" == "stop" -o "$action" == "start-gaming" ]; then
     echo "Stopping services..."
 
@@ -41,6 +41,9 @@ elif [ "$action" == "stop" -o "$action" == "start-gaming" ]; then
     killall thunderbird
 
     if [ "$action" == "stop" ]; then
+        # Since vesktop process is not named vesktop or anything related to it
+        # (it's named electron), we need to find the pid of the vesktop process
+        # by looking for the pid of the process with class "vesktop" using hyprctl
         pid=$(hyprctl clients | awk '/class: vesktop/{flag=1;next}/pid:/{if(flag){print $2;exit}}')
 
         # Kill vesktop if it is running

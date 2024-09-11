@@ -20,15 +20,15 @@ configuration{
 /*****----- Global Properties -----*****/
 @theme                          "shared/colors.rasi"
 
-element-text, element-icon , mode-switcher {
+element-text, element-icon, mode-switcher {
     background-color: inherit;
     text-color:       inherit;
 }
 
 window {
-    height: 500px;
+    height: 600px;
     border: 2px;
-    // border-radius: 12px;
+    border-radius: 10px;
     border-color: @border;
     background-color: @background;
 }
@@ -85,7 +85,7 @@ element-icon {
 }
 
 element selected {
-    background-color:  @selected ;
+    background-color: @selected ;
     text-color: @background  ;
     border-radius: 3px;
 }

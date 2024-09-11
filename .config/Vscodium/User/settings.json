@@ -33,7 +33,7 @@
 	"editor.inlayHints.fontSize": 12,
 	"editor.linkedEditing": true,
 	"editor.maxTokenizationLineLength": 1000,
-	"editor.minimap.enabled": true,
+	"editor.minimap.enabled": false,
 	"editor.minimap.renderCharacters": false,
 	"editor.smoothScrolling": true,
 	"editor.stickyScroll.enabled": false,
@@ -101,5 +101,11 @@
 	"workbench.tree.indent": 15,
 	"zenMode.hideLineNumbers": false,
 	"zenMode.hideStatusBar": false,
-	"zenMode.hideActivityBar": false
+	"zenMode.hideActivityBar": false,
+	"github.copilot.enable": {
+		"*": true,
+		"plaintext": true,
+		"markdown": false,
+		"scminput": false
+	}
 }

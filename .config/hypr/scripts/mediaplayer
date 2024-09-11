@@ -24,4 +24,21 @@ elif [ "$action" == "previous" ]; then
 else
     echo "Invalid action: $action"
     usage
+    exit 1
+fi
+
+# Dismiss previous notifications
+hyprctl dismissnotify
+
+# Send notification
+if [ "$action" == "play-pause" ]; then
+    status=$(playerctl status)
+
+    if [ "$status" == "Playing" ]; then
+        hyprctl notify -1 2000 "rgb(D9BE8E)" "fontsize:30 ▶️ Media: Playing"
+    else
+        hyprctl notify -1 2000 "rgb(D9BE8E)" "fontsize:30 ⏸️ Media: Paused"
+    fi
+else
+    hyprctl notify -1 5000 "rgb(D9BE8E)" "fontsize:25 🎵 Now Playing: $(playerctl metadata title)"
 fi

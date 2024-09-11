@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Steam
+Comment=Launch Steam
+Exec=steam
+Icon=steam
+Terminal=false
+Type=Application
+Categories=Game;

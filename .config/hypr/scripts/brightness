@@ -5,6 +5,12 @@ usage() {
     exit 1
 }
 
+update_global_brightness_envs() {
+    MAX_BRIGHTNESS=$(brightnessctl | grep -oP 'Max brightness: \K\d+')
+    CURRENT_BRIGHTNESS=$(brightnessctl | grep -oP 'Current brightness: \K\d+')
+    CURRENT_BRIGHTNESS_PERCENTAGE=$((CURRENT_BRIGHTNESS * 100 / MAX_BRIGHTNESS))
+}
+
 # Get value of argument (action: up, down,idle,restore-idle)
 action=$1
 
@@ -18,23 +24,32 @@ CURRENT_BRIGHTNESS_PERCENTAGE=$((CURRENT_BRIGHTNESS * 100 / MAX_BRIGHTNESS))
 LOWEST_BRIGHTNESS_PERCENTAGE_ALLOWED=5
 IDLE_BRIGHTNESS_PERCENTAGE=5
 
-if [ "$action" == "up" ]; then
-    # Check if current brightness is already at max
-    if [ "$CURRENT_BRIGHTNESS" -ge "$MAX_BRIGHTNESS" ]; then
-        echo "Brightness is already at maximum level"
-        exit 1
+if [ "$action" == "up" ] || [ "$action" == "down" ]; then
+    # Check if the brightness percentage value is a multiple of 5
+    if [ "$((CURRENT_BRIGHTNESS_PERCENTAGE % 5))" -ne 0 ]; then
+        echo "Brightness percentage is not a multiple of 5"
+        # Update it to the nearest multiple of 5
+        CURRENT_BRIGHTNESS_PERCENTAGE=$((CURRENT_BRIGHTNESS_PERCENTAGE + 5 - CURRENT_BRIGHTNESS_PERCENTAGE % 5))
+        brightnessctl s "$CURRENT_BRIGHTNESS_PERCENTAGE%"
     fi
 
-    echo "Increasing brightness by 5%"
-    brightnessctl s +5%
-elif [ "$action" == "down" ]; then
-    if [ "$CURRENT_BRIGHTNESS_PERCENTAGE" -le "$LOWEST_BRIGHTNESS_PERCENTAGE_ALLOWED" ]; then
-        echo "Brightness is already at lowest level ($LOWEST_BRIGHTNESS_PERCENTAGE_ALLOWED%)"
-        exit 1
-    fi
+    if [ "$action" == "up" ]; then
+        # Check if current brightness is already at max
+        if [ "$CURRENT_BRIGHTNESS" -ge "$MAX_BRIGHTNESS" ]; then
+            echo "Brightness is already at maximum level"
+            exit 1
+        fi
 
-    echo "Lowering brightness by 5%"
-    brightnessctl s 5%-
+        brightnessctl s +5%
+    elif [ "$action" == "down" ]; then
+        # Check if current brightness is already at lowest allowed level
+        if [ "$CURRENT_BRIGHTNESS_PERCENTAGE" -le "$LOWEST_BRIGHTNESS_PERCENTAGE_ALLOWED" ]; then
+            echo "Brightness is already at lowest level ($LOWEST_BRIGHTNESS_PERCENTAGE_ALLOWED%)"
+            exit 1
+        fi
+
+        brightnessctl s 5%-
+    fi
 elif [ "$action" == "idle" ]; then
     echo "Saving current brightness and setting to 5%"
     brightnessctl -s
@@ -45,4 +60,13 @@ elif [ "$action" == "restore-idle" ]; then
 else
     echo "Invalid action: $action"
     usage
+    exit 1
 fi
+
+# Update the brightness values stored in memory by the script
+update_global_brightness_envs
+
+# Dismiss previous notifications
+hyprctl dismissnotify
+# Send notification with the new brightness level
+hyprctl notify 2 2000 "rgb(D9BE8E)" "fontsize:30   Brightness: $CURRENT_BRIGHTNESS_PERCENTAGE%"

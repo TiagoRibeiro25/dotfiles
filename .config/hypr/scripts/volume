@@ -18,13 +18,40 @@ get_volume_percentage() {
     echo "$(awk -v vol="$volume" 'BEGIN { printf("%.0f", vol * 100) }')%"
 }
 
+get_volume_state() {
+    # Check if it has the word "MUTED" in the output
+    volume=$(wpctl get-volume @DEFAULT_AUDIO_SINK@)
+    if [[ $volume == *"MUTED"* ]]; then
+        echo "Muted"
+    else
+        echo "Unmuted"
+    fi
+}
+
 if [ "$action" == "up" ]; then
-    wpctl set-volume -l 1.4 @DEFAULT_AUDIO_SINK@ 5%+
+    wpctl set-volume -l 1.4 @DEFAULT_AUDIO_SINK@ 1%+
 elif [ "$action" == "down" ]; then
-    wpctl set-volume -l 1.4 @DEFAULT_AUDIO_SINK@ 5%-
+    wpctl set-volume -l 1.4 @DEFAULT_AUDIO_SINK@ 1%-
 elif [ "$action" == "toggle-mute" ]; then
     wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle
 else
     echo "Invalid action: $action"
     usage
+    exit 1
+fi
+
+# Dismiss previous notifications
+hyprctl dismissnotify
+
+# Send notification
+if [ "$action" == "toggle-mute" ]; then
+    status=$(get_volume_state)
+
+    if [ "$status" == "Muted" ]; then
+        hyprctl notify -1 2000 "rgb(D9BE8E)" "fontsize:30 🔇 Volume: $(get_volume_state)"
+    else
+        hyprctl notify -1 2000 "rgb(D9BE8E)" "fontsize:30 🔊 Volume: $(get_volume_state)"
+    fi
+else
+    hyprctl notify -1 2000 "rgb(D9BE8E)" "fontsize:30 🎵 Volume: $(get_volume_percentage)"
 fi
