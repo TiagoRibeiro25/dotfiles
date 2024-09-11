@@ -40,5 +40,6 @@ if [ "$action" == "play-pause" ]; then
         hyprctl notify -1 2000 "rgb(D9BE8E)" "fontsize:30 ⏸️ Media: Paused"
     fi
 else
+    sleep 0.5
     hyprctl notify -1 5000 "rgb(D9BE8E)" "fontsize:25 🎵 Now Playing: $(playerctl metadata title)"
 fi
