@@ -50,7 +50,6 @@ source $ZSH/oh-my-zsh.sh
 
 # Custom aliases
 alias cd="z"
-alias y="yazi"
 alias fk="fuck"
 alias code="codium"
 alias fonts-reset="sudo fc-cache -f -v"
