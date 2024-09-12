@@ -1,3 +1,4 @@
+ananicy-cpp
 android-studio
 atril
 baobab
@@ -7,10 +8,12 @@ bat
 beekeeper-studio-appimage
 bleachbit
 blueman
+bluez-obex
 bluez-tools
 brave-bin
 brightnessctl
 btop
+cachyos-ananicy-rules-git
 chaotic-keyring
 chaotic-mirrorlist
 clipse-bin
@@ -32,7 +35,6 @@ fastfetch
 firefox
 firewalld
 freedownloadmanager
-gamemode
 git
 github-desktop
 gnome-disk-utility
@@ -72,7 +74,6 @@ libreoffice-fresh
 linux
 linux-firmware
 linux-headers
-ly
 mangohud
 mate-polkit
 mirage
@@ -101,6 +102,7 @@ opencl-nvidia
 openrgb
 p7zip
 pacman-contrib
+parsec-bin
 pavucontrol
 peaclock
 pipewire-alsa
@@ -122,6 +124,7 @@ reflector
 rofi-calc-git
 rofi-wayland
 rofimoji
+sddm
 seahorse
 smartmontools
 spicetify-cli
