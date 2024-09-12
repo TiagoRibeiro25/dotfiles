@@ -44,6 +44,7 @@ gnome-system-monitor
 go
 goverlay
 gpu-screen-recorder-gtk-git
+greetd
 grub
 gst-libav
 gstreamer-vaapi
@@ -96,6 +97,7 @@ nvidia-utils
 nvm
 nvtop
 nwg-displays
+nwg-hello
 nwg-look
 obs-studio
 opencl-nvidia
@@ -124,7 +126,6 @@ reflector
 rofi-calc-git
 rofi-wayland
 rofimoji
-sddm
 seahorse
 smartmontools
 spicetify-cli
