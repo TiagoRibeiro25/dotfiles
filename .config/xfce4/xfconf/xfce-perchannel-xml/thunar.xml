@@ -4,7 +4,7 @@
   <property name="last-view" type="string" value="ThunarIconView"/>
   <property name="last-icon-view-zoom-level" type="string" value="THUNAR_ZOOM_LEVEL_100_PERCENT"/>
   <property name="last-window-maximized" type="bool" value="true"/>
-  <property name="last-separator-position" type="int" value="210"/>
+  <property name="last-separator-position" type="int" value="211"/>
   <property name="last-show-hidden" type="bool" value="true"/>
   <property name="last-sort-column" type="string" value="name"/>
   <property name="last-sort-order" type="string" value="GTK_SORT_ASCENDING"/>
@@ -12,7 +12,7 @@
   <property name="misc-full-path-in-tab-title" type="bool" value="false"/>
   <property name="last-details-view-zoom-level" type="string" value="THUNAR_ZOOM_LEVEL_100_PERCENT"/>
   <property name="last-details-view-visible-columns" type="string" value="THUNAR_COLUMN_DATE_MODIFIED,THUNAR_COLUMN_NAME,THUNAR_COLUMN_SIZE,THUNAR_COLUMN_TYPE"/>
-  <property name="last-details-view-column-widths" type="string" value="50,50,198,187,50,94,50,50,392,50,50,78,50,158"/>
+  <property name="last-details-view-column-widths" type="string" value="50,50,206,187,50,94,50,50,1347,50,50,78,50,63"/>
   <property name="last-window-width" type="int" value="931"/>
   <property name="last-window-height" type="int" value="1011"/>
   <property name="misc-directory-specific-settings" type="bool" value="true"/>
@@ -30,4 +30,7 @@
   <property name="last-splitview-separator-position" type="int" value="843"/>
   <property name="misc-date-style" type="string" value="THUNAR_DATE_STYLE_SHORT"/>
   <property name="shortcuts-icon-size" type="string" value="THUNAR_ICON_SIZE_32"/>
+  <property name="misc-open-new-window-as-tab" type="bool" value="true"/>
+  <property name="last-statusbar-visible" type="bool" value="true"/>
+  <property name="last-menubar-visible" type="bool" value="true"/>
 </channel>
