@@ -2,6 +2,9 @@
 	"[dockerfile]": {
 		"editor.defaultFormatter": "ms-azuretools.vscode-docker"
 	},
+	"[dotenv]": {
+		"editor.defaultFormatter": "foxundermoon.shell-format"
+	},
 	"[go]": {
 		"editor.defaultFormatter": "golang.go"
 	},
@@ -24,9 +27,9 @@
 		"source.organizeImports": "explicit"
 	},
 	"editor.cursorBlinking": "smooth",
-	"editor.fontFamily": "JetBrains Mono",
 	"editor.cursorStyle": "block",
 	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.fontFamily": "JetBrains Mono",
 	"editor.fontLigatures": true,
 	"editor.guides.bracketPairs": "active",
 	"editor.guides.bracketPairsHorizontal": true,
@@ -51,6 +54,12 @@
 	"files.insertFinalNewline": true,
 	"git.confirmSync": false,
 	"git.enableSmartCommit": true,
+	"github.copilot.enable": {
+		"*": true,
+		"markdown": false,
+		"plaintext": true,
+		"scminput": false
+	},
 	"gitlens.codeLens.enabled": false,
 	"gitlens.currentLine.enabled": false,
 	"gitlens.hovers.currentLine.enabled": false,
@@ -73,6 +82,8 @@
 		"**/node_modules": true
 	},
 	"security.workspace.trust.untrustedFiles": "open",
+	"sync.gist": "614d2f4b42c57d462710c5d7d38a68d2",
+	"sync.quietSync": true,
 	"template-string-converter.autoRemoveTemplateString": true,
 	"template-string-converter.validLanguages": [
 		"svelte",
@@ -99,13 +110,7 @@
 	"workbench.sideBar.location": "right",
 	"workbench.startupEditor": "none",
 	"workbench.tree.indent": 15,
-	"zenMode.hideLineNumbers": false,
-	"zenMode.hideStatusBar": false,
 	"zenMode.hideActivityBar": false,
-	"github.copilot.enable": {
-		"*": true,
-		"plaintext": true,
-		"markdown": false,
-		"scminput": false
-	}
+	"zenMode.hideLineNumbers": false,
+	"zenMode.hideStatusBar": false
 }
