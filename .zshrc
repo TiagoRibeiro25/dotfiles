@@ -51,6 +51,7 @@ source $ZSH/oh-my-zsh.sh
 # Custom aliases
 alias cd="z"
 alias fk="fuck"
+alias m="mousepad"
 alias code="codium"
 alias fonts-reset="sudo fc-cache -f -v"
 alias ff="fastfetch --config groups.jsonc"
