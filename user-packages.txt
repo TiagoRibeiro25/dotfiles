@@ -65,6 +65,7 @@ intel-media-driver
 intel-ucode
 iwd
 iwgtk
+jre-openjdk
 keepassxc
 kitty
 lib32-gamemode
@@ -147,6 +148,7 @@ tlpui
 trash-cli
 ttf-ms-win11-auto
 tumbler
+udiskie
 unrar
 vesktop
 vi
@@ -159,7 +161,6 @@ waybar
 webapp-manager
 wget
 wireless_tools
-wl-clip-persist
 xarchiver
 xdg-desktop-portal-gtk
 xdg-desktop-portal-hyprland
