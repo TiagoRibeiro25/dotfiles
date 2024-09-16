@@ -1,5 +1,5 @@
 /* Text Font */
 
 * {
-	font-family: "Noto Sans Mono";
+	font-family: "MesloLGS Nerd Font Mono";
 }

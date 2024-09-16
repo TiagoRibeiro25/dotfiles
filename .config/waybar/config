@@ -27,16 +27,9 @@
 		"max-length": 110,
 		"icon-size": 15
 	},
-	"custom/spotify": {
-		"exec": "/usr/bin/python3 /home/tiago/.config/waybar/modules/mediaplayer.py --player spotify",
-		"format": "{} ",
-		"return-type": "json",
-		"on-click": "~/.config/hypr/scripts/mediaplayer play-pause",
-		"on-scroll-up": "~/.config/hypr/scripts/mediaplayer next",
-		"on-scroll-down": "~/.config/hypr/scripts/mediaplayer previous"
-	},
 	"tray": {
 		"icon-size": 15,
+		"show-passive-items": true,
 		"spacing": 5
 	},
 	"temperature": {
@@ -93,7 +86,7 @@
 	},
 	"cpu": {
 		"interval": 4,
-		"format": " {usage}%",
+		"format": "󰍛 {usage}%",
 		"states": {
 			"warning": 70,
 			"critical": 90
@@ -102,7 +95,7 @@
 	},
 	"memory": {
 		"interval": 4,
-		"format": "  {used}/{total}GB",
+		"format": "{used}/{total}GB",
 		"states": {
 			"warning": 70,
 			"critical": 90
@@ -116,7 +109,7 @@
 			"warning": 30,
 			"critical": 15
 		},
-		"format-charging": " {icon} {capacity}%",
+		"format-charging": "󱐋 {icon} {capacity}%",
 		"format": "{icon} {capacity}%",
 		"format-icons": [
 			" ",
@@ -140,13 +133,13 @@
 		"tooltip": false,
 		"format": "{icon}",
 		"format-icons": {
-			"notification": "<span foreground='red'><sup></sup></span>",
+			"notification": "",
 			"none": "",
-			"dnd-notification": "<span foreground='red'><sup></sup></span>",
+			"dnd-notification": "",
 			"dnd-none": "",
-			"inhibited-notification": "<span foreground='red'><sup></sup></span>",
+			"inhibited-notification": "",
 			"inhibited-none": "",
-			"dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
+			"dnd-inhibited-notification": "",
 			"dnd-inhibited-none": ""
 		},
 		"return-type": "json",
@@ -157,7 +150,7 @@
 		"escape": true
 	},
 	"custom/colorpicker": {
-		"format": "",
+		"format": "󰃉",
 		"tooltip": false,
 		"on-click": "hyprpicker -a"
 	},

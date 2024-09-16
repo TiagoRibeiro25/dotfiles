@@ -3,6 +3,7 @@ configuration{
     lines: 6;
     show-icons: true;
     icon-theme: "Tela-dark";
+    font: "MesloLGS Nerd Font Mono 13";
     terminal: "kitty";
     drun-display-format: "{icon} {name}";
     location: 0;
@@ -10,7 +11,7 @@ configuration{
     hide-scrollbar: true;
     display-drun: "   Apps ";
     display-run: "   Run ";
-    display-window: " 﩯  window";
+    display-window: "   window";
     sidebar-mode: true;
     hover-select:				true;
 	me-select-entry:			"";

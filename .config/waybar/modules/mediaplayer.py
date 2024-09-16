@@ -1,4 +1,16 @@
 #!/usr/bin/env python3
+
+# Waybar code:
+# "custom/spotify": {
+# 	"exec": "/usr/bin/python3 /home/tiago/.config/waybar/modules/mediaplayer.py --player spotify",
+# 	"format": "{} ",
+# 	"return-type": "json",
+# 	"on-click": "~/.config/hypr/scripts/mediaplayer play-pause",
+# 	"on-scroll-up": "~/.config/hypr/scripts/mediaplayer next",
+# 	"on-scroll-down": "~/.config/hypr/scripts/mediaplayer previous"
+# },
+
+
 import gi
 gi.require_version("Playerctl", "2.0")
 from gi.repository import Playerctl, GLib
