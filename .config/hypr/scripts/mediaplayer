@@ -39,7 +39,8 @@ if [ "$action" == "play-pause" ]; then
     else
         hyprctl notify -1 2000 "rgb(D9BE8E)" "fontsize:30 ⏸️ Media: Paused"
     fi
-else
-    sleep 0.5
-    hyprctl notify -1 5000 "rgb(D9BE8E)" "fontsize:25 🎵 Now Playing: $(playerctl metadata title)"
+elif [ "$action" == "next" ]; then
+    hyprctl notify -1 2000 "rgb(D9BE8E)" "fontsize:30 ⏭️ Next track $(playerctl metadata title)"
+elif [ "$action" == "previous" ]; then
+    hyprctl notify -1 2000 "rgb(D9BE8E)" "fontsize:30 ⏮️ Previous track $(playerctl metadata title)"
 fi

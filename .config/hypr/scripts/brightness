@@ -69,4 +69,4 @@ update_global_brightness_envs
 # Dismiss previous notifications
 hyprctl dismissnotify
 # Send notification with the new brightness level
-hyprctl notify 2 2000 "rgb(D9BE8E)" "fontsize:30   Brightness: $CURRENT_BRIGHTNESS_PERCENTAGE%"
+hyprctl notify -1 2000 "rgb(D9BE8E)" "fontsize:30 💡 Brightness: $CURRENT_BRIGHTNESS_PERCENTAGE%"
