@@ -77,6 +77,7 @@ libpulse
 libreoffice-fresh
 linux
 linux-firmware
+linux-headers
 mangohud
 mate-polkit
 meson
@@ -93,7 +94,7 @@ noto-fonts-cjk
 noto-fonts-emoji
 noto-fonts-extra
 ntfs-3g
-nvidia
+nvidia-dkms
 nvidia-prime
 nvidia-settings
 nvidia-utils
@@ -102,6 +103,7 @@ nvtop
 nwg-displays
 nwg-hello
 nwg-look
+obs-studio
 opencl-nvidia
 openrgb
 p7zip
@@ -119,6 +121,7 @@ postman-bin
 powertop
 protonhax
 protonup-qt
+pulsemixer
 qt5-wayland
 qt5ct
 qt6ct
@@ -154,11 +157,12 @@ udiskie
 unrar
 unzip
 vesktop
+vlc
 vmware-workstation
 vscodium
 vulkan-intel
 vulkan-tools
-waybar-git
+waybar
 webapp-manager
 wget
 wireplumber
