@@ -1,11 +1,13 @@
 {
     "minimizeToTray": true,
     "discordBranch": "stable",
-    "arRPC": "on",
+    "arRPC": true,
     "splashColor": "rgb(212, 190, 155)",
     "splashBackground": "rgb(41, 41, 41)",
     "tray": true,
-    "customTitleBar": true,
+    "customTitleBar": false,
     "disableMinSize": true,
-    "clickTrayToShowHide": true
+    "clickTrayToShowHide": true,
+    "enableMenu": true,
+    "splashTheming": true
 }
