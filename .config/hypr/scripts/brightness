@@ -2,7 +2,6 @@
 
 usage() {
     echo "Usage: brightness [up|down|idle|restore-idle]"
-    exit 1
 }
 
 update_global_brightness_envs() {
@@ -16,6 +15,7 @@ action=$1
 
 if [ -z "$action" ]; then
     usage
+    exit 1
 fi
 
 MAX_BRIGHTNESS=$(brightnessctl | grep -oP 'Max brightness: \K\d+')
@@ -54,9 +54,11 @@ elif [ "$action" == "idle" ]; then
     echo "Saving current brightness and setting to 5%"
     brightnessctl -s
     brightnessctl s $IDLE_BRIGHTNESS_PERCENTAGE%
+    exit 0
 elif [ "$action" == "restore-idle" ]; then
     echo "Restoring brightness to saved value"
     brightnessctl -r
+    exit 0
 else
     echo "Invalid action: $action"
     usage
