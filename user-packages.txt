@@ -41,7 +41,6 @@ gnome-font-viewer
 gnome-keyring
 gnome-system-monitor
 go
-golangci-lint-bin
 goverlay
 gpu-screen-recorder-gtk-git
 greetd
@@ -137,6 +136,7 @@ spicetify-cli
 spicetify-marketplace-bin
 spotify
 steam
+streamlink
 stremio
 stress
 swaync
@@ -157,7 +157,6 @@ udiskie
 unrar
 unzip
 vesktop
-vlc
 vmware-workstation
 vscodium
 vulkan-intel
