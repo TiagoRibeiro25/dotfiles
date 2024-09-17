@@ -1,12 +1,12 @@
 # Check if the terminal is kitty
 if [ "$TERM" = "xterm-kitty" ]; then
-  fastfetch --config osv2.jsonc
+  fastfetch --config best.jsonc
 fi
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-#   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-# fi
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
 
 # Uncomment the following line if pasting URLs and other text is messed up.
 # DISABLE_MAGIC_FUNCTIONS="true"
@@ -53,12 +53,13 @@ alias fk="fuck"
 alias m="mousepad"
 alias code="codium"
 alias fonts-reset="sudo fc-cache -f -v"
-alias ff="fastfetch --config groups.jsonc"
+alias ff="fastfetch --config best.jsonc"
 alias yay-remove-children='yay -Rcns $(yay -Qdtq)'
 alias yay-remove-package='yay -Rcns'
 alias reflector-update="sudo reflector --verbose --latest 10 --sort rate --protocol https --save /etc/pacman.d/mirrorlist"
 alias hi="bat ~/.zsh_history"
 alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
+alias nvidia-status="cat /sys/bus/pci/devices/0000:01:00.0/power/runtime_status && cat /sys/bus/pci/devices/0000\:01\:00.0/power_state"
 # Start/Stop VMware services
 alias start-vmware-services="systemctl start vmware-networks.service vmware-usbarbitrator.service"
 alias stop-vmware-services="systemctl stop vmware-networks.service vmware-usbarbitrator.service"
