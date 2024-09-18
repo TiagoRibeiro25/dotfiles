@@ -6,8 +6,8 @@ Exec=brave --app="https://chat.openai.com/chat" --class=WebApp-ChatGPTbrave2851 
 Terminal=false
 X-MultipleArgs=false
 Type=Application
-Icon=org.kde.neochat
-Categories=GTK;WebApps;
+Icon=gbrainy
+Categories=GTK;Utility;
 MimeType=text/html;text/xml;application/xhtml_xml;
 StartupWMClass=WebApp-ChatGPTbrave2851
 StartupNotify=true

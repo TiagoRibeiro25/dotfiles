@@ -4,7 +4,7 @@ HYPRGAMEMODE=$(hyprctl getoption animations:enabled | sed -n '1p' | awk '{print 
 # Hyprland performance
 if [ $HYPRGAMEMODE = 1 ]; then
     # Load hyprland plugins (cs resolution fix)
-    hyprpm reload -n
+    # hyprpm reload -n
 
     ~/.config/hypr/scripts/autostart start-gaming
     hyprctl --batch "\

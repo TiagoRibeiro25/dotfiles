@@ -78,12 +78,11 @@ confirm_run () {
 # Execute Command
 run_cmd() {
 	if [[ "$1" == '--opt1' ]]; then
-		#"$DIR"/hypr/scripts/lock
-		loginctl lock-session
+		"$DIR"/hypr/scripts/lock
 	elif [[ "$1" == '--opt2' ]]; then
 		confirm_run "$DIR/hypr/scripts/exit" 
 	elif [[ "$1" == '--opt3' ]]; then
-		confirm_run "loginctl lock-session" 'systemctl suspend'
+		confirm_run "$DIR"/hypr/scripts/lock 'systemctl suspend'
 	elif [[ "$1" == '--opt4' ]]; then
 		confirm_run 'systemctl hibernate'
 	elif [[ "$1" == '--opt5' ]]; then
