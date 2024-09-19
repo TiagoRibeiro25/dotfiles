@@ -3,7 +3,7 @@
 
 include "/home/tiago/.gtkrc-2.0.mine"
 gtk-theme-name="Gruvbox-Dark"
-gtk-icon-theme-name="Gruvbox"
+gtk-icon-theme-name="Gruvbox-Material-Dark"
 gtk-font-name="JetBrains Mono 11"
 gtk-cursor-theme-name="Capitaine-Cursors-Gruvbox"
 gtk-cursor-theme-size=24
