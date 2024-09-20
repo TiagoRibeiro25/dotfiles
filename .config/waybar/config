@@ -19,7 +19,6 @@
 		"custom/clipboard",
 		"custom/colorpicker",
 		"custom/notification",
-		"custom/clock",
 		"clock"
 	],
 	"hyprland/window": {
@@ -47,11 +46,6 @@
 		"max-length": 7,
 		"min-length": 7
 	},
-	"custom/clock": {
-        "format": " {}",
-        "interval": 60,
-        "exec": "date +'%H:%M'"
-    },
 	"clock": {
 		"tooltip-format": "<tt><small>{calendar}</small></tt>",
 		"calendar": {
@@ -75,8 +69,8 @@
 			"on-scroll-up": "shift_up",
 			"on-scroll-down": "shift_down"
 		},
-		"format": "",
-		"interval": 3600
+		"format": "{:%b. %d. %A | %H:%M}",
+		"interval": 60
 	},
 	"custom/dsbattery": {
 		"format": "{}",

@@ -64,7 +64,6 @@ window#waybar {
 	margin: 0px 5px 0px 5px;
 }
 
-#custom-clock,
 #clock,
 #custom-dsbattery,
 #battery,
@@ -75,8 +74,7 @@ window#waybar {
 #temperature,
 #custom-colorpicker,
 #custom-clipboard,
-#custom-notification,
-.custom-spotify {
+#custom-notification {
 	padding: 5px 8px;
 	border-style: solid;
 	opacity: 1;
@@ -85,14 +83,11 @@ window#waybar {
 
 #network,
 #temperature,
-#custom-colorpicker,
-#custom-spotify {
+#custom-colorpicker {
 	margin: 0px 0px 0px 0px;
 }
 
 #clock {
-	font-size: 16px;
-	margin-left: -5px;
 	margin-right: 10px;
 }
 
