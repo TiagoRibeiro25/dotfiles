@@ -11,10 +11,15 @@ blueman
 bluez
 bluez-tools
 bluez-utils
+bottles
 brave-bin
 brightnessctl
 btop
 cachyos-ananicy-rules-git
+cachyos-keyring
+cachyos-mirrorlist
+cachyos-v3-mirrorlist
+cachyos-v4-mirrorlist
 chaotic-keyring
 chaotic-mirrorlist
 clipse-bin
@@ -38,7 +43,6 @@ git
 github-desktop
 gnome-disk-utility
 gnome-font-viewer
-gnome-keyring
 gnome-system-monitor
 go
 goverlay
@@ -75,6 +79,8 @@ lib32-opencl-nvidia
 libpulse
 libreoffice-fresh
 linux
+linux-cachyos
+linux-cachyos-headers
 linux-firmware
 linux-headers
 mangohud
@@ -129,11 +135,9 @@ reflector
 rofi-calc-git
 rofi-wayland
 rofimoji
-seahorse
 smartmontools
 sof-firmware
 spicetify-cli
-spicetify-marketplace-bin
 spotify
 steam
 streamlink
@@ -156,6 +160,7 @@ tumbler
 udiskie
 unrar
 unzip
+update-grub
 vesktop
 vmware-workstation
 vscodium
@@ -164,7 +169,9 @@ vulkan-tools
 waybar
 webapp-manager
 wget
+wine-mono
 wireplumber
+wl-clip-persist
 xarchiver
 xdg-desktop-portal-gtk
 xdg-desktop-portal-hyprland
