@@ -11,10 +11,10 @@
 	"modules-right": [
 		"tray",
 		"custom/dsbattery",
-		"network",
 		"temperature",
 		"cpu",
 		"memory",
+		"network",
 		"battery",
 		"custom/clipboard",
 		"custom/colorpicker",
@@ -42,9 +42,7 @@
 			"",
 			"",
 			""
-		],
-		"max-length": 7,
-		"min-length": 7
+		]
 	},
 	"clock": {
 		"tooltip-format": "<tt><small>{calendar}</small></tt>",

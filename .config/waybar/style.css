@@ -91,10 +91,6 @@ window#waybar {
 	margin-right: 10px;
 }
 
-#temperature {
-	margin-left: 5px;
-}
-
 #temperature.critical {
 	color: @red;
 }
