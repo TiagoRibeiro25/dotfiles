@@ -22,6 +22,7 @@ cachyos-v3-mirrorlist
 cachyos-v4-mirrorlist
 chaotic-keyring
 chaotic-mirrorlist
+chatterino2-7tv-git
 clipse-bin
 cpio
 cups
@@ -43,6 +44,7 @@ git
 github-desktop
 gnome-disk-utility
 gnome-font-viewer
+gnome-keyring
 gnome-system-monitor
 go
 goverlay
@@ -91,6 +93,7 @@ mkinitcpio-firmware
 mongodb-compass
 mousepad
 nano
+nbfc-linux
 network-manager-applet
 networkmanager
 noisetorch
@@ -124,7 +127,6 @@ pipewire-v4l2
 plymouth
 postman-bin
 powertop
-protonhax
 protonup-qt
 pulsemixer
 qt5-wayland
@@ -135,12 +137,14 @@ reflector
 rofi-calc-git
 rofi-wayland
 rofimoji
+seahorse
 smartmontools
 sof-firmware
 spicetify-cli
 spotify
 steam
 streamlink
+streamlink-twitch-gui-bin
 stremio
 stress
 swaync
