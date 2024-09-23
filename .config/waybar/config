@@ -5,11 +5,11 @@
 	"modules-left": [
 		"custom/launcher",
 		"hyprland/workspaces",
+		"tray",
 		"hyprland/window"
 	],
 	"modules-center": [],
 	"modules-right": [
-		"tray",
 		"custom/dsbattery",
 		"temperature",
 		"cpu",
