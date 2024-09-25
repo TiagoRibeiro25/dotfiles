@@ -4,11 +4,9 @@
 process_pid=$(pidof hypridle)
 
 if [ -n "$process_pid" ]; then
-    notify-send "hypridle is running, killing it"
     echo "hypridle is running, killing it"
     kill $process_pid
 else
-    notify-send "hypridle is not running, starting it"
     echo "hypridle is not running, starting it"
     hypridle &
 fi
