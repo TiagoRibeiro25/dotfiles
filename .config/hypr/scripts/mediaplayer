@@ -14,18 +14,18 @@ fi
 
 if [ "$action" == "play-pause" ]; then
     playerctl play-pause
-    hyprctl notify -1 2500 "rgb(D9BE8E)" "fontsize:20 Music/Video has been toggled"
 elif [ "$action" == "next" ]; then
     playerctl next
-    hyprctl notify -1 2000 "rgb(D9BE8E)" "fontsize:20 Next track"
 elif [ "$action" == "previous" ]; then
     playerctl previous
-    hypctl notify -1 2000 "rgb(D9BE8E)" "fontsize:20 Previous track"
 else
     echo "Invalid action: $action"
     usage
     exit 1
 fi
+
+# Wait for playerctl to update
+sleep 0.7
 
 # Dismiss previous notifications
 hyprctl dismissnotify
