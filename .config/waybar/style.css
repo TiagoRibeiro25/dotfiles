@@ -72,7 +72,6 @@ window#waybar {
 #network,
 #tray,
 #temperature,
-#custom-colorpicker,
 #custom-clipboard,
 #custom-notification {
 	padding: 5px 8px;
@@ -85,6 +84,15 @@ window#waybar {
 #temperature,
 #custom-colorpicker {
 	margin: 0px 0px 0px 0px;
+}
+
+#custom-colorpicker {
+	padding-left: 6px;
+	padding-right: 3px;
+}
+
+#idle_inhibitor {
+	margin-left: 3px;
 }
 
 #clock {

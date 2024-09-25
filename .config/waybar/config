@@ -19,6 +19,7 @@
 		"custom/clipboard",
 		"custom/colorpicker",
 		"custom/notification",
+		"idle_inhibitor",
 		"clock"
 	],
 	"hyprland/window": {
@@ -43,6 +44,16 @@
 			"",
 			""
 		]
+	},
+	"idle_inhibitor": {
+		"format": "{icon}",
+		"format-icons": {
+			"activated": "",
+			"deactivated": ""
+		},
+		"tooltip": false,
+		"on-click": "~/.config/hypr/scripts/idle",
+		"exec-if": "pgrep -x hypridle"
 	},
 	"clock": {
 		"tooltip-format": "<tt><small>{calendar}</small></tt>",
