@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Steam (w/ mangohud)
+Comment=Open steam with mangohud for all games
+Exec=env MANGOHUD=1 steam
+Icon=steam
+Terminal=false
+Type=Application
+Categories=Game;
