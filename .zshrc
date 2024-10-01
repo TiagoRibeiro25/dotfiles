@@ -1,6 +1,6 @@
 # Check if the terminal is kitty
 if [ "$TERM" = "xterm-kitty" ]; then
-  fastfetch --config best.jsonc
+  fastfetch --config doubledot.jsonc
 fi
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
@@ -53,7 +53,7 @@ alias fk="fuck"
 alias ge="geany"
 alias code="codium"
 alias fonts-reset="sudo fc-cache -f -v"
-alias ff="fastfetch --config best.jsonc"
+alias ff="fastfetch --config doubledot.jsonc"
 alias yay-remove-children='yay -Rcns $(yay -Qdtq)'
 alias yay-remove-package='yay -Rcns'
 alias reflector-update="sudo reflector --verbose --latest 10 --sort rate --protocol https --save /etc/pacman.d/mirrorlist"
