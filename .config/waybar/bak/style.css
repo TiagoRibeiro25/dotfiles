@@ -1,0 +1,161 @@
+@import "color.css";
+
+/* -----------------------------------------------------------------------------
+ * Keyframes
+ * -------------------------------------------------------------------------- */
+
+@keyframes blink {
+	to {
+		color: @red;
+	}
+}
+
+* {
+	color: @yellow;
+	border: 0;
+	border-radius: 0;
+	padding: 0 0;
+	font-family: "JetBrains Mono";
+	font-size: 14px;
+	padding-top: 1px;
+	transition: all 0.5s ease;
+}
+
+window#waybar {
+	background-color: @black;
+	opacity: 0.97;
+}
+
+#workspaces button {
+	color: @black;
+	padding-bottom: 3px;
+	opacity: 0.7;
+}
+
+#workspaces button:hover * {
+	color: @peach;
+}
+
+#workspaces button:hover {
+	color: @peach;
+	box-shadow: none;
+	text-shadow: none;
+	border: 0px;
+	background: none;
+	opacity: 1;
+}
+
+#workspaces button.active,
+#workspaces button.urgent {
+	opacity: 1;
+}
+
+#workspaces button.active * {
+	color: @green;
+}
+
+#workspaces button.urgent * {
+	color: @peach;
+}
+
+#workspaces {
+	border-style: solid;
+	opacity: 1;
+	margin: 0px 5px 0px 5px;
+}
+
+#clock,
+#custom-dsbattery,
+#battery,
+#cpu,
+#memory,
+#network,
+#tray,
+#temperature,
+#custom-clipboard,
+#custom-notification {
+	padding: 5px 8px;
+	border-style: solid;
+	opacity: 1;
+	margin: 0px 1px 0px 1px;
+}
+
+#network,
+#temperature,
+#custom-colorpicker {
+	margin: 0px 0px 0px 0px;
+}
+
+#custom-colorpicker {
+	padding-left: 6px;
+	padding-right: 3px;
+}
+
+#idle_inhibitor {
+	margin-left: 5px;
+}
+
+#clock {
+	margin-right: 10px;
+}
+
+#temperature.critical {
+	color: @red;
+}
+
+#battery.charging {
+	color: @rosewater;
+}
+
+#battery.warning,
+#memory.warning,
+#cpu.warning {
+	color: @maroon;
+	background: transparent;
+}
+
+#memory.critical,
+#cpu.critical {
+	color: @red;
+}
+
+#battery.critical:not(.charging) {
+	color: @red;
+	animation-name: blink;
+	animation-duration: 0.5s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+}
+
+#cpu,
+#cpu #cpu-icon,
+#memory {
+	color: @yellow;
+}
+
+#network.disabled {
+	color: @red;
+}
+
+#network.disconnected {
+	color: @red;
+}
+
+#custom-launcher {
+	margin: 0px 17px 0px 17px;
+	font-size: 16px;
+	color: @green;
+}
+
+#window {
+	border-style: hidden;
+	margin-right: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 2px;
+}
+
+#window > * {
+	color: @flamingo;
+}

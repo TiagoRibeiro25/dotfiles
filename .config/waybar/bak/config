@@ -33,7 +33,7 @@
 		"spacing": 10
 	},
 	"temperature": {
-		"interval": 4,
+		"interval": 5,
 		"hwmon-path-abs": "/sys/devices/platform/coretemp.0/hwmon",
 		"input-filename": "temp1_input",
 		"critical-threshold": 80,
@@ -83,13 +83,13 @@
 	},
 	"custom/dsbattery": {
 		"format": "{}",
-		"interval": 10,
+		"interval": 30,
 		"escape": true,
 		"exec": "dsbattery",
 		"on-click-right": "dsbattery -d"
 	},
 	"cpu": {
-		"interval": 4,
+		"interval": 5,
 		"format": "󰍛 {usage}%",
 		"states": {
 			"warning": 70,
@@ -98,7 +98,7 @@
 		"on-click": "gnome-system-monitor"
 	},
 	"memory": {
-		"interval": 4,
+		"interval": 5,
 		"format": "{used}/{total}GB",
 		"states": {
 			"warning": 70,
@@ -107,7 +107,7 @@
 		"on-click": "gnome-system-monitor"
 	},
 	"battery": {
-		"interval": 25,
+		"interval": 30,
 		"states": {
 			"good": 95,
 			"warning": 30,
@@ -125,7 +125,7 @@
 		"tooltip": true
 	},
 	"network": {
-		"interval": 8,
+		"interval": 30,
 		"format-wifi": "  Wifi",
 		"format-ethernet": "󱎔 Wired",
 		"format-disconnected": "⚠ Disconnected",

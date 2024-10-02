@@ -68,6 +68,8 @@ fi
 # Update the brightness values stored in memory by the script
 update_global_brightness_envs
 
+exit 0
+
 # Dismiss previous notifications
 hyprctl dismissnotify
 # Send notification with the new brightness level
