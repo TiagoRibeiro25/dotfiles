@@ -2,8 +2,12 @@
 	"layer": "top",
 	"position": "top",
 	"height": 32,
-	"modules-left": ["custom/launcher", "hyprland/workspaces", "wlr/taskbar"],
-	"modules-center": ["clock", "custom/playerctl"],
+	"modules-left": [
+		"custom/launcher",
+		"hyprland/workspaces",
+		"custom/playerctl"
+	],
+	"modules-center": ["wlr/taskbar"],
 	"modules-right": [
 		"tray",
 		"custom/dsbattery",
@@ -14,7 +18,8 @@
 		"idle_inhibitor",
 		"custom/clipboard",
 		"custom/colorpicker",
-		"custom/notification"
+		"custom/notification",
+		"clock"
 	],
 
 	"custom/launcher": {
@@ -27,7 +32,7 @@
 	"wlr/taskbar": {
 		// "format": "{icon} {app_id}",
 		"format": "{icon}",
-		"icon-size": 14,
+		"icon-size": 15,
 		"icon-theme": "Papirus",
 		"tooltip-format": "{title}",
 		"on-click": "activate",
@@ -70,13 +75,14 @@
 
 	"custom/dsbattery": {
 		"format": "{}",
-		"interval": 15,
+		"interval": 20,
 		"escape": true,
 		"exec": "dsbattery",
 		"on-click-right": "dsbattery -d"
 	},
 
 	"network": {
+		"interval": 30,
 		"format-wifi": "󰒢 {essid}",
 		"format-ethernet": "󰈀  {ifname}",
 		"format-linked": "󰒢 {essid} (No IP)",

@@ -55,6 +55,10 @@ tooltip {
 	color: #ebdbb2;
 }
 
+#custom-playerctl {
+	margin-left: 10px;
+}
+
 #date,
 #backlight,
 #idle_inhibitor,
