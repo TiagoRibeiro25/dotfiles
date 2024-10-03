@@ -2,8 +2,13 @@
 	"layer": "top",
 	"position": "top",
 	"height": 32,
-	"modules-left": ["custom/launcher", "hyprland/workspaces", "wlr/taskbar"],
-	"modules-center": ["custom/playerctl"],
+	"modules-left": [
+		"custom/launcher",
+		"hyprland/workspaces",
+		"wlr/taskbar",
+		"custom/playerctl"
+	],
+	"modules-center": [],
 	"modules-right": [
 		"tray",
 		"custom/dsbattery",
