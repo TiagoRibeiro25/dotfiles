@@ -12,4 +12,4 @@ My dotfiles for my Arch Linux setup.
 - **Browser**: Brave
 - **Font**: Noto Sans Mono
 
-<img src="./Screenshots/screenshot_1.png" alt="Screenshot" width="800">
+<img src="./Screenshots/screenshot.png" alt="Screenshot" width="800">
