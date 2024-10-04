@@ -2,13 +2,8 @@
 	"layer": "top",
 	"position": "top",
 	"height": 32,
-	"modules-left": [
-		"custom/launcher",
-		"hyprland/workspaces",
-		"wlr/taskbar",
-		"custom/playerctl"
-	],
-	"modules-center": [],
+	"modules-left": ["custom/launcher", "hyprland/workspaces"],
+	"modules-center": ["clock", "custom/playerctl"],
 	"modules-right": [
 		"tray",
 		"custom/dsbattery",
@@ -19,8 +14,7 @@
 		"idle_inhibitor",
 		"custom/clipboard",
 		"custom/colorpicker",
-		"custom/notification",
-		"clock"
+		"custom/notification"
 	],
 
 	"custom/launcher": {

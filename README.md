@@ -13,4 +13,3 @@ My dotfiles for my Arch Linux setup.
 - **Font**: Noto Sans Mono
 
 <img src="./Screenshots/screenshot_1.png" alt="Screenshot" width="800">
-<img src="./Screenshots/screenshot_2.png" alt="Screenshot" width="800">
