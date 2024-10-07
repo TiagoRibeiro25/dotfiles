@@ -2,10 +2,9 @@
 	"layer": "top",
 	"position": "top",
 	"height": 32,
-	"modules-left": ["custom/launcher", "hyprland/workspaces"],
+	"modules-left": ["custom/launcher", "hyprland/workspaces", "tray"],
 	"modules-center": ["clock", "custom/playerctl"],
 	"modules-right": [
-		"tray",
 		"custom/dsbattery",
 		"backlight",
 		"pulseaudio",
