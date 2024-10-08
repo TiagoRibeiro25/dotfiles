@@ -56,7 +56,7 @@
 		"on-click": "playerctl play-pause",
 		"on-click-right": "playerctl stop",
 		"on-click-middle": "killall spotify",
-		"smooth-scrolling-threshold": 10,
+		"smooth-scrolling-threshold": 2,
 		"on-scroll-up": "playerctl next",
 		"on-scroll-down": "playerctl previous",
 		"exec": "playerctl -a metadata --format '{\"text\": \"{{markup_escape(title)}} - {{artist}}\", \"tooltip\": \"{{status}} : {{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F"
@@ -103,7 +103,7 @@
 		},
 		"on-scroll-up": "~/.config/hypr/scripts/volume up",
 		"on-scroll-down": "~/.config/hypr/scripts/volume down",
-		"smooth-scrolling-threshold": 5,
+		"smooth-scrolling-threshold": 1,
 		"tooltip": false,
 		"on-click": "pavucontrol"
 	},
@@ -157,7 +157,7 @@
 		"format": "󰃠  {percent}%",
 		"on-scroll-up": "~/.config/hypr/scripts/brightness up",
 		"on-scroll-down": "~/.config/hypr/scripts/brightness down",
-		"smooth-scrolling-threshold": 2
+		"smooth-scrolling-threshold": 1
 	},
 
 	"battery": {

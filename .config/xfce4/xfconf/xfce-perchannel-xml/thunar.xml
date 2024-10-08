@@ -12,10 +12,10 @@
   <property name="misc-full-path-in-tab-title" type="bool" value="false"/>
   <property name="last-details-view-zoom-level" type="string" value="THUNAR_ZOOM_LEVEL_100_PERCENT"/>
   <property name="last-details-view-visible-columns" type="string" value="THUNAR_COLUMN_DATE_MODIFIED,THUNAR_COLUMN_NAME,THUNAR_COLUMN_SIZE,THUNAR_COLUMN_TYPE"/>
-  <property name="last-details-view-column-widths" type="string" value="50,50,231,187,50,102,50,50,1171,50,50,87,50,96"/>
+  <property name="last-details-view-column-widths" type="string" value="50,50,231,187,50,102,50,50,612,50,50,87,50,96"/>
   <property name="last-window-width" type="int" value="931"/>
   <property name="last-window-height" type="int" value="1011"/>
-  <property name="misc-directory-specific-settings" type="bool" value="false"/>
+  <property name="misc-directory-specific-settings" type="bool" value="true"/>
   <property name="default-view" type="string" value="ThunarIconView"/>
   <property name="misc-thumbnail-max-file-size" type="uint64" value="1073741824"/>
   <property name="misc-middle-click-in-tab" type="bool" value="true"/>
