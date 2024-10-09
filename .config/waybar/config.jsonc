@@ -77,12 +77,13 @@
 
 	"network": {
 		"interval": 30,
-		"format-wifi": "󰒢 {essid}",
+		"format-wifi": " ",
 		"format-ethernet": "󰈀  {ifname}",
-		"format-linked": "󰒢 {essid} (No IP)",
+		"format-linked": "󰒢 (No IP)",
 		"format-disconnected": "󰒢 Disconnected",
-		"format-alt": "{ifname} ({ipaddr})",
-		"on-click-right": "exec nm-connection-editor"
+		"on-click": "exec nm-connection-editor",
+		"tooltip-format": " {ifname}: {essid} {signalStrength}% - {ipaddr} ",
+		"tooltip": true
 	},
 
 	"pulseaudio": {
