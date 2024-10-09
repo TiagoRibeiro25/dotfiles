@@ -10,6 +10,6 @@ My dotfiles for my Arch Linux setup.
 - **Shell**: Zsh w/Oh-My-Zsh
 - **File Manager**: Thunar
 - **Browser**: Brave
-- **Font**: Noto Sans Mono
+- **Font**: JetBrains Mono
 
 <img src="./Screenshots/screenshot.png" alt="Screenshot" width="800">
