@@ -37,7 +37,7 @@ plugins=(
 # Environment variables
 export ZSH="$HOME/.oh-my-zsh" # Path to your Oh My Zsh installation.
 export ZSH_THEME="powerlevel10k/powerlevel10k"
-export EDITOR='nano' # Preferred editor for local and remote sessions
+export EDITOR='micro' # Preferred editor for local and remote sessions
 
 # Android Emulator
 export ANDROID_HOME=$HOME/Android/Sdk
