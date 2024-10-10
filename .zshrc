@@ -50,6 +50,7 @@ source $ZSH/oh-my-zsh.sh
 # Custom aliases
 alias cd="z"
 alias fk="fuck"
+alias mc="micro"
 alias code="codium"
 alias fonts-reset="sudo fc-cache -f -v"
 alias ff="fastfetch --config doubledot.jsonc"
