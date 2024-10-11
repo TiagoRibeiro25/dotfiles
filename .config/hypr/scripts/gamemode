@@ -7,14 +7,15 @@ if [ $HYPRGAMEMODE = 1 ]; then
     # hyprpm reload -n
 
     ~/.config/hypr/scripts/autostart start-gaming
-    hyprctl --batch "\
-        keyword animations:enabled 0;\
-        keyword decoration:drop_shadow 0;\
-        keyword decoration:blur:enabled 0;\
-        keyword general:gaps_in 0;\
-        keyword general:gaps_out 0;\
-        keyword general:border_size 1;\
-        keyword decoration:rounding 0"
+
+	hyprctl --batch "\
+	    keyword animations:enabled 0;\
+	    keyword decoration:drop_shadow 0;\
+	    keyword decoration:blur:enabled 0;\
+	    keyword general:gaps_in 0;\
+	    keyword general:gaps_out 0;\
+	    keyword general:border_size 1;\
+	    keyword decoration:rounding 0"
 
 	hyprshade on gaming # Enable gaming color profile
     hyprctl notify -1 2000 "rgb(26ff00)" "fontsize:25 Game mode enabled"
