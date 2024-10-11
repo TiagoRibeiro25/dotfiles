@@ -56,7 +56,7 @@
 		"on-click": "playerctl play-pause",
 		"on-click-right": "playerctl stop",
 		"on-click-middle": "killall spotify",
-		"smooth-scrolling-threshold": 2,
+		"smooth-scrolling-threshold": 1,
 		"on-scroll-up": "playerctl next",
 		"on-scroll-down": "playerctl previous",
 		"exec": "playerctl -a metadata --format '{\"text\": \"{{markup_escape(title)}} - {{artist}}\", \"tooltip\": \"{{status}} : {{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F"
@@ -78,7 +78,7 @@
 	"network": {
 		"interval": 30,
 		"format-wifi": " ",
-		"format-ethernet": "󰈀  {ifname}",
+		"format-ethernet": "󰈀 {ifname}",
 		"format-linked": "󰒢 (No IP)",
 		"format-disconnected": "󰒢 Disconnected",
 		"on-click": "exec nm-connection-editor",
