@@ -2,9 +2,10 @@
 	"layer": "top",
 	"position": "top",
 	"height": 32,
-	"modules-left": ["custom/launcher", "hyprland/workspaces", "tray"],
+	"modules-left": ["custom/launcher", "hyprland/workspaces", "hyprland/window"],
 	"modules-center": ["clock", "custom/playerctl"],
 	"modules-right": [
+		"tray",
 		"custom/dsbattery",
 		"backlight",
 		"pulseaudio",
@@ -21,6 +22,12 @@
 		"on-click": "rofi -show drun",
 		"on-right-click": "~/.config/hypr/scripts/rofi_powermenu",
 		"tooltip": false
+	},
+
+	"hyprland/window": {
+		"icon": true,
+		"max-length": 110,
+		"icon-size": 15
 	},
 
 	"wlr/taskbar": {

@@ -25,6 +25,10 @@ tooltip {
 	font-size: 18px;
 }
 
+#window {
+	margin: 0px 10px;
+}
+
 #workspaces button {
 	padding: 0 0.4em;
 	color: #504945;
