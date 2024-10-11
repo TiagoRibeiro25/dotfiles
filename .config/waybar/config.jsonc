@@ -85,8 +85,8 @@
 	"network": {
 		"interval": 30,
 		"format-wifi": " ",
-		"format-ethernet": "󰈀 {ifname}",
-		"format-linked": "󰒢 (No IP)",
+		"format-ethernet": "󰈀",
+		"format-linked": "󰒢",
 		"format-disconnected": "󰒢 Disconnected",
 		"on-click": "exec nm-connection-editor",
 		"tooltip-format": " {ifname}: {essid} {signalStrength}% - {ipaddr} ",
