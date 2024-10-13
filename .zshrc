@@ -29,7 +29,6 @@ plugins=(
   thefuck
   you-should-use
   zoxide
-  #zsh-autocomplete
   zsh-autosuggestions
   zsh-syntax-highlighting
 )
