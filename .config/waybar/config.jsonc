@@ -104,7 +104,7 @@
 			"phone": "  ",
 			"portable": "  ",
 			"car": "  ",
-			"default": ["", "", ""]
+			"default": ["", " ", "  "]
 		},
 		"states": {
 			"warning": 85
