@@ -1,160 +1,134 @@
+@import "mocha.css";
 * {
-	border: none;
-	border-radius: 0px;
 	font-family: JetBrainsMono Nerd Font;
-	font-weight: bold;
-	font-size: 15px;
-	min-height: 0;
+	font-size: 14px;
 }
 
 window#waybar {
-	background: #1d2021;
-	color: #ebdbb2;
+	background-color: #1e1e2e;
+	color: #ffffff;
+	transition-property: background-color;
+	transition-duration: 0.5s;
 }
 
-tooltip {
-	background: #282828;
-	border-radius: 10px;
-	border-width: 2px;
-	border-style: solid;
-	border-color: #1d2021;
+window#waybar.hidden {
+	opacity: 0.2;
 }
 
-#custom-launcher {
-	margin: 0px 17px;
-	font-size: 18px;
+window#waybar.termite {
+	background-color: #3f3f3f;
 }
 
-#window {
-	margin: 0px 10px;
+window#waybar.chromium {
+	background-color: #000000;
+	border: none;
 }
 
-#workspaces button {
-	padding: 0 0.4em;
-	color: #504945;
-	border-radius: 6px;
-	margin-right: 2px;
-	margin-left: 2px;
-	margin-top: 2px;
-	margin-bottom: 2px;
-}
-
-#workspaces button.active {
-	color: #ebdbb2;
-	background: #4e635b;
-}
-
-#workspaces button.focused {
-	color: #ebdbb2;
-	background: #4e635b;
-}
-
-#workspaces button.urgent {
-	color: #1d2021;
-	background: #fb4934;
-}
-
-#workspaces button:hover {
-	background: #4e635b;
-	color: #ebdbb2;
-}
-
-#date,
-#backlight,
-#idle_inhibitor,
-#custom-clipboard,
-#custom-colorpicker,
-#custom-notification,
-#pulseaudio,
-#network,
-#workspaces,
-#temperature,
-#clock,
-#tray,
-#battery,
-#custom-dsbattery {
-	background: #32302f;
-	padding: 0 0.5em;
-	margin-right: 4px;
-	margin-left: 4px;
-	margin-top: 4px;
-	margin-bottom: 4px;
-	border-radius: 6px;
-}
-
-#custom-clipboard,
-#custom-colorpicker {
-	margin: 4 0px;
+button {
+	box-shadow: inset 0 -3px transparent;
+	border: none;
 	border-radius: 0;
 }
 
-#idle_inhibitor {
-	padding-right: 12px;
-	margin-right: 0;
-	border-radius: 6px 0 0 6px;
+#workspaces button {
+	padding: 0 5px;
+	border-radius: 5em / 5em;
+	background-color: @surface0;
+	color: @text;
+	margin: 2px;
+	font-weight: bold;
 }
 
-#custom-notification {
-	margin-left: 0;
-	border-radius: 0 6px 6px 0;
-	padding-right: 12px;
-	margin-right: 5px;
+#clock,
+#battery,
+#temperature,
+#network,
+#pulseaudio,
+#tray,
+#custom-dsbattery,
+#idle_inhibitor,
+#custom-notification,
+#custom-clipboard {
+	padding: 0 8px;
+	color: @text;
+	background-color: @surface0;
+	font-weight: bold;
 }
 
+#custom-clipboard {
+	padding-left: 8px;
+	padding-right: 4px;
+}
+
+#window,
 #workspaces {
-	padding: 0 0.1em;
+	margin: 0px;
+	background-color: transparent;
+	font-weight: bold;
+	border-radius: 5em / 5em;
+	padding: 0 10px;
+	color: @text;
 }
 
-#tray {
-	margin-right: 6px;
+.modules-left > widget:first-child > #workspaces {
+	margin-left: 0;
 }
 
-#network {
-	color: #ebdbb2;
-	margin-right: 6px;
+.modules-right > widget:last-child > #workspaces {
+	margin-right: 0;
 }
 
-#pulseaudio {
-	margin-right: 6px;
-	color: #ebdbb2;
+#workspaces button.active,
+#workspaces button.focused,
+#workspaces button:hover {
+	color: @mauve;
+	background: @surface1;
 }
 
-#custom-power {
-	color: #fb4934;
-	background: #32302f;
+#workspaces button.urgent {
+	color: @red;
+	background: @surface1;
 }
 
 #clock {
-	color: #ebdbb2;
-	margin-right: 6px;
+	color: @sky;
 }
 
-#taskbar {
-	background: #1d2021;
-	padding: 0 0.6em;
-	margin-right: 10px;
-	margin-left: 4px;
-	margin-top: 4px;
-	margin-bottom: 4px;
-	border-radius: 6px;
-	color: #ebdbb2;
+@keyframes blink {
+	to {
+		background-color: #ffffff;
+		color: #000000;
+	}
 }
 
-#taskbar button {
-	border-radius: 6px;
-	background: #32302f;
-	color: #a89984;
-	margin-right: 6px;
+label:focus {
+	background-color: #000000;
 }
 
-#taskbar button.minimized {
-	border-radius: 6px;
-	background: #32302f;
-	color: #a89984;
+#network.disconnected {
+	background-color: #f53c3c;
 }
 
-#taskbar button.active {
-	border-radius: 6px;
-	background: #4e635b;
-	color: #ebdbb2;
+#pulseaudio {
+	border-top-left-radius: 5em 5em;
+	border-bottom-left-radius: 5em 5em;
+	color: @pink;
+}
+
+#pulseaudio.muted {
+	background-color: #90b1b1;
+	color: #2a5c45;
+}
+
+#temperature.critical {
+	background-color: #eb4d4b;
+}
+
+#temperature {
+	color: @green;
+}
+
+#custom-launcher {
+	margin: 0px 10px;
+	font-size: 18px;
 }

@@ -4,7 +4,7 @@
     "useQuickCss": true,
     "themeLinks": [],
     "enabledThemes": [
-        "midnight-vencord.theme.css"
+        "mocha.css"
     ],
     "enableReactDevtools": false,
     "frameless": false,
@@ -637,6 +637,9 @@
         },
         "FullSearchContext": {
             "enabled": false
+        },
+        "AccountPanelServerProfile": {
+            "enabled": false
         }
     },
     "notifications": {
@@ -649,6 +652,6 @@
         "authenticated": false,
         "url": "https://api.vencord.dev/",
         "settingsSync": false,
-        "settingsSyncVersion": 1726880037125
+        "settingsSyncVersion": 1729090550905
     }
 }
