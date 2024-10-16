@@ -26,7 +26,6 @@ plugins=(
   npm
   nvm
   sudo
-  thefuck
   you-should-use
   zoxide
   zsh-autosuggestions

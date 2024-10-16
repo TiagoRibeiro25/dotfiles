@@ -2,7 +2,7 @@
 gtk-theme=Catppuccin-Dark
 icon-theme=Tela-blue
 font-name=JetBrains Mono 11
-cursor-theme=catppuccin-mocha-dark-cursors
+cursor-theme=Fluent-dark-cursors
 cursor-size=24
 toolbar-style=both-horiz
 toolbar-icons-size=large
