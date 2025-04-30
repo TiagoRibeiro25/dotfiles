@@ -1,8 +1,0 @@
-[Desktop Entry]
-Name=Steam Friends
-Comment=Open steam friends
-Exec=steam steam://open/friends
-Icon=steam
-Terminal=false
-Type=Application
-Categories=Game;
