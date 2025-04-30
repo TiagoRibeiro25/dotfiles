@@ -8,8 +8,8 @@ My dotfiles for my Arch Linux setup.
 - **WM**: Hyprland
 - **Terminal**: Kitty
 - **Shell**: Zsh w/Oh-My-Zsh
-- **File Manager**: Thunar
-- **Browser**: Brave
+- **File Manager**: Nemo
+- **Browser**: Edge
 - **Font**: JetBrains Mono
 
 <img src="./Screenshots/screenshot.png" alt="Screenshot" width="800">
