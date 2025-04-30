@@ -8,12 +8,11 @@
 		"network",
 		"temperature",
 		"battery",
+		"tray",
 		"idle_inhibitor",
 		"custom/clipboard",
 		"custom/notification",
-		"clock",
-		"tray",
-		"custom/dsbattery"
+		"clock"
 	],
 
 	"custom/launcher": {
@@ -27,13 +26,6 @@
 		"max-length": 50,
 		"icon-size": 18
 	},
-	"custom/dsbattery": {
-		"format": "{}",
-		"interval": 30,
-		"escape": true,
-		"exec": "dsbattery",
-		"on-click-right": "dsbattery -d"
-	},
 	"tray": {
 		"icon-size": 14,
 		"spacing": 10
@@ -45,7 +37,7 @@
 		"tooltip": true
 	},
 	"network": {
-		"format-wifi": "    ({signalStrength}%)",
+		"format-wifi": "  ({signalStrength}%)",
 		"format-ethernet": " {ipaddr}/{cidr}",
 		"tooltip-format": " {ifname} via {gwaddr} on {essid}",
 		"format-linked": " {ifname} (No IP)",
@@ -65,7 +57,7 @@
 			"headset": "",
 			"phone": "",
 			"portable": "",
-			"car": "",
+			"car": " ",
 			"default": ["", "", ""]
 		},
 		"on-click": "pavucontrol"

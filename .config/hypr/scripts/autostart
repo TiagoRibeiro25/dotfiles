@@ -23,10 +23,12 @@ if [ "$action" == "start" -o "$action" == "stop-gaming" ]; then
     # echo "Launching thunderbird..."
     # hyprctl dispatch exec [workspace 8 silent] thunderbird
 
-    # if [ "$action" == "start" ]; then
-    #    echo "Starting vesktop..."
-    #    vesktop --start-minimized
-    # fi
+    if [ "$action" == "start" ]; then
+        echo "Starting vesktop..."
+        vesktop --start-minimized &
+	echo "Starting keepassxc..."
+	keepassxc &
+    fi
 elif [ "$action" == "stop" -o "$action" == "start-gaming" ]; then
     echo "Stopping services..."
 
