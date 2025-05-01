@@ -8,7 +8,7 @@ My dotfiles for my Arch Linux setup.
 - **WM**: Hyprland
 - **Terminal**: Kitty
 - **Shell**: Zsh w/Oh-My-Zsh
-- **File Manager**: Nemo
+- **File Manager**: Nautilus
 - **Browser**: Edge
 - **Font**: JetBrains Mono
 
