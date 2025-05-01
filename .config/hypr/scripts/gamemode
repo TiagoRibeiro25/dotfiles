@@ -17,11 +17,9 @@ if [ $HYPRGAMEMODE = 1 ]; then
 	    keyword general:border_size 1;\
 	    keyword decoration:rounding 0"
 
-	hyprshade on gaming # Enable gaming color profile
     hyprctl notify -1 2000 "rgb(26ff00)" "fontsize:25 Game mode enabled"
 else
     hyprctl reload
     ~/.config/hypr/scripts/autostart stop-gaming
-    hyprshade on default
     hyprctl notify -1 2000 "rgb(ff0000)" "fontsize:25 Game mode disabled"
 fi

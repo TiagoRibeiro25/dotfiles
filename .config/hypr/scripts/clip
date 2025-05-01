@@ -18,7 +18,6 @@ if [ "$action" == "history" ]; then
     $TERMINAL --class clipse -e 'clipse'
 elif [ "$action" == "clear" ]; then
     clipse -clear
-    ~/Repos/delete-cache/clipse.sh
     notify-send -i /usr/share/icons/AdwaitaLegacy/48x48/legacy/edit-clear-all.png "Clipboard" "Clipboard history has been cleared."
 else
     echo "Invalid action: $action"
