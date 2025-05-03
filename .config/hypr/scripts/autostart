@@ -20,14 +20,11 @@ if [ "$action" == "start" -o "$action" == "stop-gaming" ]; then
     echo "Starting hypridle..."
     hyprctl dispatch exec hypridle &
 
-    # echo "Launching thunderbird..."
-    # hyprctl dispatch exec [workspace 8 silent] thunderbird
-
     if [ "$action" == "start" ]; then
-        echo "Starting vesktop..."
-        vesktop --start-minimized &
-	echo "Starting keepassxc..."
-	keepassxc &
+        #echo "Starting vesktop..."
+        #vesktop --start-minimized &
+		echo "Starting keepassxc..."
+		keepassxc &
     fi
 elif [ "$action" == "stop" -o "$action" == "start-gaming" ]; then
     echo "Stopping services..."
@@ -36,7 +33,6 @@ elif [ "$action" == "stop" -o "$action" == "start-gaming" ]; then
     killall waybar
     killall hyprpaper
     killall hypridle
-    killall thunderbird
 
     if [ "$action" == "stop" ]; then
         # Since vesktop process is not named vesktop or anything related to it
