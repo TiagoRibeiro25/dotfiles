@@ -62,6 +62,7 @@ alias "hdmi-sound"="echo 'echo 1 > /sys/bus/pci/rescan'"
 alias "switch-hybrid"="sudo envycontrol -s hybrid --rtd3"
 alias "switch-integrated"="sudo envycontrol -s integrated"
 
+alias zed="zeditor"
 alias hi="cat ~/.zsh_history"
 alias rm="trash"
 alias fonts-reset="fc-cache -f -v"
