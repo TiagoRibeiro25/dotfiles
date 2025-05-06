@@ -55,9 +55,6 @@ alias egrep='egrep --color=auto'
 alias yay-remove-children='yay -Rcns $(yay -Qdtq)'
 alias yay-remove-package='yay -Rcns'
 
-#alias start-vmware-services="systemctl start vmware-networks.service vmware-usbarbitrator.service"
-#alias stop-vmware-services="systemctl stop vmware-networks.service vmware-usbarbitrator.service"
-
 alias "hdmi-sound"="echo 'echo 1 > /sys/bus/pci/rescan'"
 alias "switch-hybrid"="sudo envycontrol -s hybrid --rtd3"
 alias "switch-integrated"="sudo envycontrol -s integrated"
