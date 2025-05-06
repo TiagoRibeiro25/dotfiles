@@ -9,27 +9,15 @@ usage() {
 action=$1
 
 if [ "$action" == "start" -o "$action" == "stop-gaming" ]; then
-    echo "Starting services..."
-
-    echo "Starting waybar..."
     hyprctl dispatch exec waybar &
-
-    echo "Starting hyprpaper..."
     hyprctl dispatch exec hyprpaper &
-
-    echo "Starting hypridle..."
     hyprctl dispatch exec hypridle &
 
     if [ "$action" == "start" ]; then
-        #echo "Starting vesktop..."
         #vesktop --start-minimized &
-		echo "Starting keepassxc..."
 		keepassxc &
     fi
 elif [ "$action" == "stop" -o "$action" == "start-gaming" ]; then
-    echo "Stopping services..."
-
-    echo "Killing waybar, hyprpaper, hypridle, and thunderbird..."
     killall waybar
     killall hyprpaper
     killall hypridle
@@ -42,11 +30,7 @@ elif [ "$action" == "stop" -o "$action" == "start-gaming" ]; then
 
         # Kill vesktop if it is running
         if [ -n "$pid" ]; then
-            echo "Vesktop is running with pid: $pid"
-            echo "Killing vesktop..."
             kill $pid
-        else
-            echo "Vesktop is not running"
         fi
     fi
 else
