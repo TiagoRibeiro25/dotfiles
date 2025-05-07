@@ -29,7 +29,7 @@ element-text, element-icon, mode-switcher {
 window {
     height: 600px;
     border: 2px;
-    border-radius: 10px;
+    border-radius: 0px;
     border-color: @border;
     background-color: @background;
 }
@@ -99,7 +99,7 @@ button {
     padding: 10px;
     background-color: @background;
     text-color: @foreground;
-    vertical-align: 0.5; 
+    vertical-align: 0.5;
     horizontal-align: 0.5;
 }
 

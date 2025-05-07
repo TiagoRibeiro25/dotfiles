@@ -23,7 +23,7 @@ window {
     margin:                      0px;
     padding:                     0px;
     border:                      2px solid;
-    border-radius:               15px;
+    border-radius:               0px;
     border-color:                @border;
     cursor:                      "default";
     background-color:            @background;
@@ -95,7 +95,7 @@ listview {
     cycle:                       true;
     scrollbar:                   false;
     layout:                      vertical;
-    
+
     spacing:                     10px;
     background-color:            transparent;
     cursor:                      "default";
