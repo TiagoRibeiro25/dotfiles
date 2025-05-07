@@ -64,7 +64,7 @@ confirm_exit() {
 }
 
 # Confirm and execute
-confirm_run () {	
+confirm_run () {
 	selected="$(confirm_exit)"
 	echo $selected
 	echo $yes
@@ -72,15 +72,15 @@ confirm_run () {
         ${1} && ${2} && ${3} && ${4}
     else
         exit
-    fi	
+    fi
 }
 
 # Execute Command
 run_cmd() {
 	if [[ "$1" == '--opt1' ]]; then
-		hyprlock
+		$DIR/hypr/scripts//lock
 	elif [[ "$1" == '--opt2' ]]; then
-		confirm_run "$DIR/hypr/scripts/exit" 
+		confirm_run "$DIR/hypr/scripts/exit"
 	elif [[ "$1" == '--opt3' ]]; then
 		confirm_run "loginctl lock-session" 'systemctl suspend'
 	elif [[ "$1" == '--opt4' ]]; then
