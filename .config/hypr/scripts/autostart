@@ -14,7 +14,7 @@ if [ "$action" == "start" -o "$action" == "stop-gaming" ]; then
     hyprctl dispatch exec hypridle &
 
     if [ "$action" == "start" ]; then
-        #vesktop --start-minimized &
+        vesktop --start-minimized &
 		keepassxc &
     fi
 elif [ "$action" == "stop" -o "$action" == "start-gaming" ]; then

@@ -1,7 +1,11 @@
 {
 	"layer": "top",
 	"position": "top",
-	"modules-left": ["custom/launcher", "hyprland/workspaces", "hyprland/window"],
+	"modules-left": [
+		"custom/launcher",
+		"hyprland/workspaces",
+		"hyprland/window",
+	],
 	"modules-center": [],
 	"modules-right": [
 		"pulseaudio",
@@ -12,28 +16,28 @@
 		"idle_inhibitor",
 		"custom/clipboard",
 		"custom/notification",
-		"clock"
+		"clock",
 	],
 
 	"custom/launcher": {
 		"format": "",
 		"on-click": "rofi -show drun",
-		"tooltip": false
+		"tooltip": false,
 	},
 	"hyprland/window": {
 		"icon": true,
 		"max-length": 50,
-		"icon-size": 18
+		"icon-size": 18,
 	},
 	"tray": {
 		"icon-size": 16,
-		"spacing": 10
+		"spacing": 10,
 	},
 	"clock": {
 		"interval": 60,
 		"format": "{:%H:%M  %A %b %d}",
 		"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-		"tooltip": true
+		"tooltip": true,
 	},
 	"network": {
 		"format-wifi": "  ({signalStrength}%)",
@@ -41,10 +45,10 @@
 		"tooltip-format": " {ifname} via {gwaddr} on {essid}",
 		"format-linked": " {ifname} (No IP)",
 		"format-disconnected": "⚠ Disconnected",
-		"format-alt": "{ifname}: {ipaddr}/{cidr}"
+		"format-alt": "{ifname}: {ipaddr}/{cidr}",
 	},
 	"pulseaudio": {
-		"format": "{icon}   {volume}%   {format_source}",
+		"format": "{icon}  {volume}%  {format_source}",
 		"format-bluetooth": "{volume}% {icon} {format_source}",
 		"format-bluetooth-muted": " {icon} {format_source}",
 		"format-muted": " {format_source}",
@@ -57,9 +61,9 @@
 			"phone": "",
 			"portable": "",
 			"car": " ",
-			"default": ["", "", ""]
+			"default": ["", "", ""],
 		},
-		"on-click": "pavucontrol"
+		"on-click": "pavucontrol",
 	},
 	"temperature": {
 		"interval": 5,
@@ -68,29 +72,29 @@
 		"critical-threshold": 90,
 		"format-critical": "  {temperatureC}°C",
 		"format": "{icon} {temperatureC}°C",
-		"format-icons": ["", "", ""]
+		"format-icons": ["", "", ""],
 	},
 	"battery": {
 		"interval": 20,
 		"states": {
 			"warning": 20,
-			"critical": 10
+			"critical": 10,
 		},
 		"format": "{icon} {capacity}%",
 		"format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂁", "󰂂", "󰁹"],
 		"format-full": "{icon} {capacity}%",
 		"format-charging": "󰂄 {capacity}%",
-		"tooltip": true
+		"tooltip": true,
 	},
 	"idle_inhibitor": {
 		"format": "{icon}",
 		"format-icons": {
 			"activated": "󰈈",
-			"deactivated": "󰈉"
+			"deactivated": "󰈉",
 		},
 		"tooltip": false,
 		"on-click": "~/.config/hypr/scripts/idle",
-		"exec-if": "pgrep -x hypridle"
+		"exec-if": "pgrep -x hypridle",
 	},
 	"custom/notification": {
 		"tooltip": false,
@@ -103,19 +107,19 @@
 			"inhibited-notification": "",
 			"inhibited-none": "",
 			"dnd-inhibited-notification": "",
-			"dnd-inhibited-none": ""
+			"dnd-inhibited-none": "",
 		},
 		"return-type": "json",
 		"exec-if": "which swaync-client",
 		"exec": "swaync-client -swb",
 		"on-click": "swaync-client -t -sw",
 		"on-click-right": "swaync-client -d -sw",
-		"escape": true
+		"escape": true,
 	},
 	"custom/clipboard": {
 		"format": "󰅍",
 		"tooltip": false,
 		"on-click": "~/.config/hypr/scripts/clip history",
-		"on-click-right": "~/.config/hypr/scripts/clip clear"
-	}
+		"on-click-right": "~/.config/hypr/scripts/clip clear",
+	},
 }
