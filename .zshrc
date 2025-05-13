@@ -34,7 +34,7 @@ plugins=(
 
 export ZSH="/home/tiago/.oh-my-zsh" # Path to your Oh My Zsh installation.
 export ZSH_THEME="powerlevel10k/powerlevel10k"
-export EDITOR='micro' # Preferred editor for local and remote sessions
+export EDITOR='nano' # Preferred editor for local and remote sessions
 
 # Android Emulator
 # export ANDROID_HOME=$HOME/Android/Sdk
@@ -59,6 +59,8 @@ alias "hdmi-sound"="echo 'echo 1 > /sys/bus/pci/rescan'"
 alias "switch-hybrid"="sudo envycontrol -s hybrid --rtd3"
 alias "switch-integrated"="sudo envycontrol -s integrated"
 
+alias y="export EDITOR=zeditor; yazi"
+alias projects="export EDITOR=zeditor; yazi ~/Git"
 alias zed="zeditor"
 alias hi="cat ~/.zsh_history"
 alias rm="trash"
