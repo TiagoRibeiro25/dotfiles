@@ -1,0 +1,60 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+	"agent": {
+		"model_parameters": [],
+		"inline_assistant_model": {
+			"provider": "copilot_chat",
+			"model": "gpt-4o"
+		},
+		"version": "2"
+	},
+	"icon_theme": "VSCode Icons (Dark)",
+	"features": {
+		"edit_prediction_provider": "copilot"
+	},
+	"telemetry": {
+		"metrics": false,
+		"diagnostics": false
+	},
+	"ui_font_size": 14,
+	"buffer_font_size": 16,
+	"theme": {
+		"mode": "system",
+		"light": "One Light",
+		"dark": "VSCode Dark Modern"
+	},
+	"buffer_font_family": "JetBrainsMono Nerd Font",
+	"ui_font_family": "JetBrainsMono Nerd Font",
+	"middle_click_paste": false,
+	"hard_tabs": true,
+	"tab_size": 3,
+	"soft_wrap": "editor_width",
+	"project_panel": {
+		"dock": "right"
+	},
+	"git_panel": {
+		"dock": "right"
+	},
+	"chat_panel": {
+		"dock": "right"
+	},
+	"collaboration_panel": {
+		"dock": "right"
+	},
+	"notification_panel": {
+		"dock": "right"
+	},
+	"outline_panel": {
+		"dock": "right"
+	},
+	"terminal_panel": {
+		"dock": "bottom"
+	}
+}

@@ -1,6 +1,4 @@
-if [ "$TERM" = "xterm-kitty" ]; then
-  fastfetch --config archBTW.jsonc
-fi
+fastfetch --config archBTW.jsonc
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
@@ -55,10 +53,10 @@ alias egrep='egrep --color=auto'
 alias yay-remove-children='yay -Rcns $(yay -Qdtq)'
 alias yay-remove-package='yay -Rcns'
 
-alias "hdmi-sound"="echo 'echo 1 > /sys/bus/pci/rescan'"
-alias "switch-hybrid"="sudo envycontrol -s hybrid --rtd3"
-alias "switch-integrated"="sudo envycontrol -s integrated"
+alias "switch-hybrid"="supergfxctl -m Hybrid"
+alias "switch-integrated"="supergfxctl -m Integrated"
 
+alias mc="micro"
 alias zed="zeditor"
 alias hi="cat ~/.zsh_history"
 alias rm="trash"
