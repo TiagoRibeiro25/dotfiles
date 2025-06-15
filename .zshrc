@@ -56,7 +56,6 @@ alias yay-remove-package='yay -Rcns'
 alias "switch-hybrid"="supergfxctl -m Hybrid"
 alias "switch-integrated"="supergfxctl -m Integrated"
 
-alias mc="micro"
 alias zed="zeditor"
 alias hi="cat ~/.zsh_history"
 alias rm="trash"
