@@ -6,7 +6,7 @@ echo "Checking if yay is installed..."
 # Check if yay is installed
 if ! command -v yay &> /dev/null
 then
-	echo "yay could not be found, installing it..."
+	echo "yay could not be found. Please install yay first."
 	exit 1
 fi
 
