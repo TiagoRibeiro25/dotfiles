@@ -23,7 +23,8 @@
 		"metrics": false,
 		"diagnostics": false
 	},
-	"ui_font_size": 14,
+	"show_edit_predictions": true,
+	"ui_font_size": 15,
 	"buffer_font_size": 16,
 	"theme": {
 		"mode": "system",
@@ -36,6 +37,11 @@
 	"hard_tabs": true,
 	"tab_size": 3,
 	"soft_wrap": "editor_width",
+	"toolbar": {
+		"breadcrumbs": true,
+		"quick_actions": false,
+		"selections_menu": false
+	},
 	"project_panel": {
 		"dock": "right"
 	},
