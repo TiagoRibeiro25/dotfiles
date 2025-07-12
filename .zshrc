@@ -57,11 +57,10 @@ alias "switch-hybrid"="supergfxctl -m Hybrid"
 alias "switch-integrated"="supergfxctl -m Integrated"
 
 alias zed="zeditor"
-alias hi="cat ~/.zsh_history"
+alias hi="history"
 alias rm="trash"
 alias fonts-reset="fc-cache -f -v"
 alias ff="fastfetch --config archBTW.jsonc"
-alias ct="countryfetch"
 alias neofetch="fastfetch --config archBTW.jsonc"
 alias nvidia-status="cat /sys/bus/pci/devices/0000:01:00.0/power/runtime_status && cat /sys/bus/pci/devices/0000\:01\:00.0/power_state"
 alias "install-vencord"='sh -c "$(curl -sS https://raw.githubusercontent.com/Vendicated/VencordInstaller/main/install.sh)"'
